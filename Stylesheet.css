@@ -1,0 +1,223 @@
+/* https://xd.adobe.com/view/a8a30fd2-503a-4e8d-949f-7815efb8b2cf-fdf0/specs/  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lineto Akkurat,Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40px;
+  width: 200px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  margin: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: auto;
+  max-height: 100%;
+  /* Das Bild bleibt innerhalb der Höhe des Headers */
+  width: auto;
+  max-width: 100%;
+  /* Das Bild bleibt innerhalb der Breite des Headers */
+}
+
+
+
+/*Schrift*/
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-left: auto;
+
+}
+
+
+
+.Produktvorstellung-container {
+  display: flex;
+  align-items: center;
+  background-image: url(/Responsive/Aufderwebseite/Flaschenkreis2.png);
+  background-size: cover; /* Falls das Hintergrundbild den gesamten Container abdecken soll */
+  background-position: right; /* Das Hintergrundbild rechts positionieren */
+  padding: 15%; /* Einen äußeren Abstand hinzufügen */
+}
+
+.Produktvorstellung-Text {
+  flex: 1;
+  text-align: left;
+  
+  margin-left: -120px;
+  max-width: 55%; /* Breite des Textcontainers begrenzen */
+}
+
+
+
+.CallToAction-Button {
+  background-color: #000;
+  border: 2px solid #00000000;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  outline-offset: 2px;
+  padding: 13px 16px;
+  text-transform: uppercase;
+  margin-top: 600px; /* Abstand zwischen Text und Button */
+  margin-left: -590px;
+
+}
+
+
+.CallToAction-Button:hover {
+  background-color: #5E2028;
+}
+
+
+
+
+.Hintergrunddbild2{
+  max-width: 100%;
+  height: auto;
+}
+.footer-fa-icon{
+  margin: 0 0 0 1200px;
+  opacity: 1;
+   color: rgba(0, 0, 0, 0.904);
+  font-size: 40px; 
+  
+}
+
+.fa.fa-youtube {
+  color: rgba(0, 0, 0, 0.904);
+   font-size: 40px;   
+}
+
+.fa.fa-instagram{
+   color: rgba(0, 0, 0, 0.904);
+   font-size: 40px;   
+}
+
+.fa.fa-facebook {
+  color: rgba(0, 0, 0, 0.904);
+  font-size: 40px;
+}
+
+.fa.fa-pinterest {
+  color: rgba(0, 0, 0, 0.904);
+  font-size: 40px;
+}
+
+.fa:hover, .fa:focus{
+  text-decoration: none;
+  color: rgb(99, 18, 18);
+  overflow: hidden;
+}
+
+
+
+.footer-impressum {
+  font-size: 18px;
+  line-height: 1.25; 
+}
+
+.footer-button {
+  background-color: #000;
+  border: 2px solid #00000000;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  outline-offset: 2px;
+  padding: 13px 16px;
+  text-transform: uppercase;
+  
+}
+.footer-button:hover{
+  background-color: #5E2028;
+}
+
+
+.footer-bottom {
+  height: 24.8vh;
+  background-color: #5E2028;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%; /* Fügt 100% Breite hinzu, um sicherzustellen, dass der Inhalt die gesamte Breite einnimmt */
+}
+
+.footer-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Zeigt die Liste als Flex-Container an */
+}
+
+.footer-navigation-item {
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 24px 0; /* Ändert die Padding-Einstellungen, um die gewünschte Ausrichtung zu erreichen */
+}
+
+#footer-ende {
+  display: flex;
+  flex-direction: column; /* Ändert die Ausrichtung auf Spaltenlayout */
+  align-items: center;
+  text-align: center;
+}
+
+#footer-ende p {
+  margin: 10px 0; /* Ändert die Margin-Einstellungen für den Abstand */
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 767px) {
+  header {
+    width: 25%;
+    /* Der Header erstreckt sich über die volle Breite des Bildschirms */
+  }
+
+  header img {
+    content: url('/Responsive/Logo+Icon/W-Logo.png');
+    /* Pfad zu deinem neuen Bild */
+    max-width: 1000px;
+    /* Beispiel: Reduziere die maximale Breite des neuen Bildes auf 70px */
+  }
+}
