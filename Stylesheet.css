@@ -2,7 +2,6 @@
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: Lineto Akkurat,Helvetica Neue,Helvetica,Arial,sans-serif;
   line-height: 1.5;
@@ -33,17 +32,16 @@ header img {
 /*Schrift*/
 
 h2 {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 2opx;
   font-weight: 700;
   line-height: 1.1;
-  text-transform: uppercase;
 }
 
 p {
@@ -53,11 +51,10 @@ p {
 }
 
 
-
 .Produktvorstellung-container {
   display: flex;
   align-items: center;
-  background-image: url(/Responsive/Aufderwebseite/Flaschenkreis2.png);
+  background-image: url(./Aufderwebseite/Flaschenkreis2.png);
   background-size: cover; /* Falls das Hintergrundbild den gesamten Container abdecken soll */
   background-position: right; /* Das Hintergrundbild rechts positionieren */
   padding: 15%; /* Einen äußeren Abstand hinzufügen */
@@ -70,7 +67,6 @@ p {
   margin-left: -120px;
   max-width: 55%; /* Breite des Textcontainers begrenzen */
 }
-
 
 .CallToAction-Button {
   background-color: #000;
@@ -90,13 +86,10 @@ p {
 
 }
 
-
 .CallToAction-Button:hover {
   background-color: #5E2028;
   border: 2px solid #5E2028;
 }
-
-
 
 
 .Hintergrunddbild2{
@@ -127,7 +120,7 @@ p {
 
 .footer-fa-icon{
   margin: 0 0 0 1200px;
-  opacity: 1;
+  opacity: 2;
    color: rgba(0, 0, 0, 0.904);
   font-size: 40px; 
   
@@ -161,12 +154,12 @@ p {
 
 
 
-.footer-impressum {
+.impressum {
   font-size: 18px;
   line-height: 1.25; 
 }
 
-.footer-button {
+.Letzter-button {
   background-color: #000;
   border: 2px solid #00000000;
   border-radius: 0;
@@ -181,17 +174,19 @@ p {
   text-transform: uppercase;
   
 }
-.footer-button:hover{
+
+.Letzter-button:hover{
   background-color: #5E2028;
   border: 2px solid #5E2028;
 }
 
 
 .footer-bottom {
-  height: 24.8vh;
+  height: 22.8vh;
   background-color: #5E2028;
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -218,16 +213,16 @@ p {
 }
 
 #footer-ende {
-  display: flex;
-  flex-direction: column; /* Ändert die Ausrichtung auf Spaltenlayout */
-  align-items: center;
-  text-align: center;
-}
-
-#footer-ende p {
-  margin: 10px 0; /* Ändert die Margin-Einstellungen für den Abstand */
   font-weight: 700;
   color: #FFFFFF;
+}
+
+#letzer-Satz {
+  font-size: medium;
+  text-align: right;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-top: 10px; /* Ändere den Wert nach Bedarf */
 }
 
 
@@ -238,9 +233,15 @@ p {
   }
 
   header img {
-    content: url('/Responsive/Logo+Icon/W-Logo.png');
+    content: url('./Logo+Icon/W-Logo.png');
     /* Pfad zu deinem neuen Bild */
     max-width: 1000px;
     /* Beispiel: Reduziere die maximale Breite des neuen Bildes auf 70px */
+  }
+
+  .Produktvorstellung-container {
+    display: flex;
+    align-items: center;
+    background-image: url(./Aufderwebseite/Handy_Flaschen.png);
   }
 }
