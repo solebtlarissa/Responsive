@@ -1,17 +1,19 @@
 /* https://xd.adobe.com/view/a8a30fd2-503a-4e8d-949f-7815efb8b2cf-fdf0/specs/  */
 
 * {
-  margin: 0;
+  /* margin: 0; */
   box-sizing: border-box;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
-
-header {
+header{
+  position: absolute;
+}
+header a {
   background-color: rgba(0, 0, 0, 0.6);
   height: 40px;
   width: 200px;
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   margin: 0;
@@ -226,6 +228,282 @@ height: 50%;
   color: #FFFFFF;
   margin-top: 10px; /* Ändere den Wert nach Bedarf */
 }
+
+/* --------------------------*/
+
+
+
+/* Reset und Basis-Stile */
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+}
+
+/* Hero-Sektion */
+.hero {
+  top: 0;
+  left: 0;
+  background-color: #5e2028;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Carousel-Sektion */
+#carousel {
+  height: 90vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: scroll;
+  margin: 0;
+  padding: 0 2em;
+  margin-top: 15em;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Scrollbar ausblenden */
+#carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Wine Bottles-Sektion */
+.winebottles {
+  display: flex;
+  gap: 7em;
+}
+
+.winebottles > div {
+  height: fit-content;
+  width: fit-content;
+  margin: 1em;
+}
+
+.square {
+  position: relative;
+  width: 32vw;
+  height: 29vw;
+}
+
+/* Square Styling für verschiedene Kategorien */
+#dry .square,
+#halfdry .square,
+#sweet .square {
+  background-color: #58262d;
+  border: 1px solid #707070;
+}
+
+.square img {
+  width: 87%;
+  height: auto;
+  position: absolute;
+  transform: translateX(20%);
+  top: 37%;
+}
+
+.square p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0.4px;
+  width: 50%;
+  color: white;
+  padding:1em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Button-Gruppe */
+.buttongroup {
+  flex-direction: row;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.carouselbtn {
+  position: relative;
+  opacity: 1;
+  width: 100px;
+  height: 15px;
+  background-color: #a8a8a8;
+}
+
+.carouselbtn button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+#span1 {
+  background-color: #000000;
+}
+
+/* Gemeinsame Styles für Text und Überschriften */
+h1,
+.productdetails .text {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Produkt-Detail-Sektion */
+.productdetails {
+  display: grid;
+  max-width: 98vw;
+  grid-template-columns: 1fr 90px 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.productdetails img {
+  width: 171px;
+  height: 432px;
+}
+#product {
+  /* position: absolute; */
+  width: 171px;
+  height: 432px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  grid-column: 2;
+  grid-row: span 4;
+  justify-self: center;
+
+}
+
+
+
+/* Gemeinsame Styles für Text mit Linie */
+.text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #707070;
+  font-size: 1em;
+  position: relative;
+  visibility: hidden;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.line{
+  color: black;
+  border-top: 2px solid #707070;
+  
+  text-transform: uppercase;
+  font-size: 34px;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+/* Kreise und Overlays für Produkt-Details */
+
+
+
+area {
+  outline: 1px solid #a8a8a8;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.circle {
+  position: relative;
+  background-color: #a8a8a8;
+  /* Set the default background color */
+  border-radius: 50%;
+  /* Create a circular shape */
+  z-index: 99;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  /* Initially hide the circles */
+}
+
+#cCircleOverlay {
+  bottom: 420px;
+    left: 101px;
+}
+
+#bCircleOverlay {
+  bottom: 320px;
+  left: 39px;
+}
+
+#lCircleOverlay {
+  bottom: 258px;
+  left: 104px;
+}
+
+#wCircleOverlay {
+  bottom: 113px;
+  left: 76px;
+}
+
+#cork {
+  padding-top: 10px;
+  margin-top: 28px;}
+
+
+
+#bottle {
+  padding-top: 10px;
+  margin-top: -83px;
+  grid-template-columns: 60% 40%;
+}
+#wine{
+  grid-template-columns: 60% 40%;
+
+}
+#bottle div{
+  grid-area: 1/2;
+}
+#bottle p{
+  grid-area: 1/1;
+}
+
+#label {
+  padding-top: 10px;
+  margin-top: 28px;}
+
+#wine {
+  padding-top: 10px;
+  margin-top: 28px;}
+
+  #wine div{
+    grid-area: 1/2;
+  }
+  #wine p{
+    grid-area: 1/1;
+  }
+
+
+/* Responsive-Styles für kleine Bildschirme */
+@media screen and (max-width: 600px) {
+  .square {
+    width: 90vw;
+    height: 85vw;
+  }
+
+  .square p {
+    font-size: 2em;
+  }
+
+  #carousel {
+    height: 70vh;
+  }
+}
+
+
+
+/* --------------------------*/
+
+
+
+
+
 
 
 @media only screen and (max-width: 767px) {
