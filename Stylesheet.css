@@ -501,32 +501,6 @@ area {
 /* --------------------------*/
 
 
-
-
-
-
-
-@media only screen and (max-width: 767px) {
-  header {
-    width: 25%;
-    /* Der Header erstreckt sich über die volle Breite des Bildschirms */
-  }
-
-  header img {
-    content: url('./Logo+Icon/W-Logo.png');
-    /* Pfad zu deinem neuen Bild */
-    max-width: 1000px;
-    /* Beispiel: Reduziere die maximale Breite des neuen Bildes auf 70px */
-  }
-
-  .Produktvorstellung-container {
-    display: flex;
-    align-items: center;
-    background-image: url(./Aufderwebseite/Handy_Flaschen.png);
-  }
-}
-
-
 @media only screen and (max-width: 767px) {
   header {
     width: 25%;
