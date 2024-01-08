@@ -63,7 +63,7 @@ p, aside{
 }
 
 
-/* Hero-Sektion */
+/* Hero-Sektion - 1.Video*/
 .hero {
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@ p, aside{
 }
 
 
-/* Wine Bottles-Sektion */
+/* 2.Wine Bottles-Sektion*/
 .winebottles {
   display: flex;
   gap: 7em;
@@ -175,15 +175,15 @@ p, aside{
   background-color: #000000;
 }
 
-
+/* 3.Produktvostellung*/
 .Produktvorstellung-container {
   display: flex;
   align-items: center;
   background-image: url(./Aufderwebseite/Flaschenkreis2.png);
   background-size: cover; /* Falls das Hintergrundbild den gesamten Container abdecken soll */
   background-position: right; /* Das Hintergrundbild rechts positionieren */
-  padding-left: 50px;
-  margin-bottom: 100px;
+  padding-left: 70px;
+  margin-bottom: 130px;
   margin-top: 100px;
   top: 0;
   left: 0;
@@ -220,15 +220,75 @@ p, aside{
   background-color: #5E2028;
   border: 2px solid #5E2028;
 }
+
 #CallToAction-Button:first-child{
   margin-right: 0;
   margin-left: 0;
 }
 
+
+/* 5. Produkt im einzelnen  */
+.wein-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 70px;
+  margin-bottom: 130px;
+}
+
+.wein-title {
+  font-size: 32px;
+  text-align: left;
+}
+
+#wein-kasten {
+  border-right: 2px solid black; /* Ändere die Eigenschaften der Linie nach Bedarf */
+  padding-right: 20px; /* Füge einen Abstand zwischen dem Bild und der Linie hinzu */
+}
+
+.wein-description {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 20px; /* Füge einen Abstand zwischen der Linie und dem Text hinzu */
+  max-width: 50%;
+}
+
+.wein-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 40px;
+padding-left: 10px;
+  margin-top: 20px;
+}
+
+.wein-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  width: auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
+
+#Weinkiste-icon{
+width: 5px;
+}  
+
+.Location-icon, .Traube-icon, .Weinkiste-icon, .Temperatur-icon {
+display: flex;
+flex-direction: column;
+align-items: center;
+flex: 1 0 20%;  /* Flex-Basis auf 20% setzen, damit nicht mehr als 5 Elemente in einer Zeile sind */
+}
+
+.Location-icon img, .Traube-icon img, .Weinkiste-icon img, .Temperatur-icon img {
+margin-bottom: 10px;  /* Abstand zwischen dem Bild und dem Text */
+} 
+
 /* Kreise und Overlays für Produkt-Details */
-
-
-
 area {
   outline: 1px solid #a8a8a8;
 }
@@ -274,20 +334,21 @@ area {
   padding-top: 10px;
   margin-top: 28px;}
 
-
-
 #bottle {
   padding-top: 10px;
   margin-top: -83px;
   grid-template-columns: 60% 40%;
 }
+
 #wine{
   grid-template-columns: 60% 40%;
 
 }
+
 #bottle div{
   grid-area: 1/2;
 }
+
 #bottle p{
   grid-area: 1/1;
 }
@@ -301,86 +362,65 @@ area {
   margin-top: 28px;
 }
 
-  #wine div{
+#wine div{
     grid-area: 1/2;
   }
-  #wine p{
+
+#wine p{
     grid-area: 1/1;
   }
 
-.wein-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 50px;
-  }
-
-.wein-title {
-    font-size: 32px;
-    text-align: left;
-  }
-
-#wein-kasten {
-    border-right: 2px solid black; /* Ändere die Eigenschaften der Linie nach Bedarf */
-    padding-right: 20px; /* Füge einen Abstand zwischen dem Bild und der Linie hinzu */
-}
-
-.wein-description {
-    font-size: 18px;
-    text-align: left;
-    margin-top: 20px;
-    padding-left: 20px; /* Füge einen Abstand zwischen der Linie und dem Text hinzu */
-    max-width: 50%;
-}
-
-.wein-icons {
-    display: flex;
-    justify-content: space-around;
-    width: 40px;
-  padding-left: 10px;
-    margin-top: 20px;
-  }
  
-.wein-button {
-    font-size: 18px;
-    padding: 10px 20px;
-    width: auto;
-    text-align: center;
-    background-color: black;
-    color: white;
-    margin-top: 20px;
-  }
-  
-#Weinkiste-icon{
-  width: 5px;
-}  
-
-.Location-icon, .Traube-icon, .Weinkiste-icon, .Temperatur-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1 0 20%;  /* Flex-Basis auf 20% setzen, damit nicht mehr als 5 Elemente in einer Zeile sind */
-}
-
-.Location-icon img, .Traube-icon img, .Weinkiste-icon img, .Temperatur-icon img {
-  margin-bottom: 10px;  /* Abstand zwischen dem Bild und dem Text */
-}  
-
-.Bewertungs-container{
-  padding-left: 50px;
+/* 8.Bewertung  */
+.Bewertungs-container {
+  padding-left: 70px;
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 130px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.Bewertungsbild{
-  top: 0;
-  left: 0;
-  height: auto;
-  max-height: 100%;
-  /* Das Bild bleibt innerhalb der Höhe des Headers */
-  width: auto;
-  max-width: 100%;
+.Bewertung-drumherum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Bewertung-drumherum img {
+  width: 30%;
+  height: 50%;
+}
+
+.Bewertungs-text {
+  width: 40%;
+  margin-right: 180px;
+}
+
+.Bewertungs-text div {
+  margin-bottom: 20px;
+}
+
+.Bewertungs-text h3 {
+  color: #333;
+  display: flex;
+  align-items: center;
+  
+}
+
+#grauer-text{
+  color: #A8A8A8;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container::before {
+  content: url(./Logo+Icon/RotesGlas.png) repeat-x; /* replace with the path to your icon */
+  background-repeat: repeat-x repeat(5);
+  margin-right: 5px; /* adjust as needed for spacing between icon and text */
+  width: 10px;
+  height: 10px;
 }
 
 .Bewertungs-button{
@@ -396,6 +436,7 @@ area {
   outline-offset: 2px;
   padding: 13px 16px;
   text-transform: uppercase;
+  margin-top: 20px;
 }
 
 .Bewertungs-button:hover {
@@ -404,9 +445,10 @@ area {
   border: 2px solid #000000;
 }
 
+/* 9.Impressum  */
+
 .impressum-container{
-  padding-left: 50px;
-  margin-top: 50px;
+  padding-left: 70px;
   margin-bottom: 80px;
 }
 
@@ -444,6 +486,8 @@ area {
 .Letztes-bild{
   padding-left: 1100px;
   margin-top: -500px;
+  width: 40px;
+  height: 50%;
 }
 
 .footer-fa-icon{
