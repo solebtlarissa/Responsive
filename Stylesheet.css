@@ -6,9 +6,12 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
+
+
 header{
   position: absolute;
 }
+
 header a {
   background-color: rgba(0, 0, 0, 0.6);
   height: 40px;
@@ -29,6 +32,12 @@ header img {
   /* Das Bild bleibt innerhalb der Breite des Headers */
 }
 
+/* Reset und Basis-Stile */
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+}
 
 
 /*Schrift*/
@@ -54,6 +63,120 @@ p, aside{
 }
 
 
+/* Hero-Sektion */
+.hero {
+  top: 0;
+  left: 0;
+  background-color: #5e2028;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/* Wine Bottles-Sektion */
+.winebottles {
+  display: flex;
+  gap: 7em;
+}
+
+.winebottles > div {
+  height: fit-content;
+  width: fit-content;
+  margin: 1em;
+}
+
+.square {
+  position: relative;
+  width: 32vw;
+  height: 29vw;
+}
+
+/* Square Styling für verschiedene Kategorien */
+#dry .square {
+  background-color: #58262d;
+  border: 1px solid #707070;
+}
+#halfdry .square{
+  background-color: #7C6B6D;
+  border: 1px solid #707070;
+}
+
+#sweet .square{
+  background-color: #731320;
+  border: 1px solid #707070;
+}
+
+.square img {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  transform: translateX(60%);
+  top: 37%;
+}
+
+.square p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0.4px;
+  width: 50%;
+  color: white;
+  padding:1em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3px;
+}
+
+/* Carousel-Sektion */
+#carousel {
+  height: 90vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: scroll;
+  margin: 0;
+  padding: 0 2em;
+  margin-top: 15em;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Scrollbar ausblenden */
+#carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Button-Gruppe */
+.buttongroup {
+  flex-direction: row;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.carouselbtn {
+  position: relative;
+  opacity: 1;
+  width: 100px;
+  height: 15px;
+  background-color: #a8a8a8;
+}
+
+.carouselbtn button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+#span1 {
+  background-color: #000000;
+}
+
+
+
 .Produktvorstellung-container {
   display: flex;
   align-items: center;
@@ -61,11 +184,14 @@ p, aside{
   background-size: cover; /* Falls das Hintergrundbild den gesamten Container abdecken soll */
   background-position: right; /* Das Hintergrundbild rechts positionieren */
   padding-left: 50px;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
 
 }
-
 
 .Produktvorstellung-Text {
   flex: 1;
@@ -97,10 +223,8 @@ p, aside{
   border: 2px solid #5E2028;
 }
 
-.Hintergrunddbild2{
-width: auto;
-height: 50%;
-}
+
+
 
 .Bewertungs-button{
   background-color: #a8a8a8;
@@ -123,44 +247,19 @@ height: 50%;
   border: 2px solid #000000;
 }
 
-.footer-fa-icon{
-  margin: 0 0 0 1200px;
-  opacity: 2;
-   color: rgba(0, 0, 0, 0.904);
-  font-size: 40px; 
-  
-}
-
-.fa.fa-youtube {
-  color: rgba(0, 0, 0, 0.904);
-   font-size: 40px;   
-}
-
-.fa.fa-instagram{
-   color: rgba(0, 0, 0, 0.904);
-   font-size: 40px;   
-}
-
-.fa.fa-facebook {
-  color: rgba(0, 0, 0, 0.904);
-  font-size: 40px;
-}
-
-.fa.fa-pinterest {
-  color: rgba(0, 0, 0, 0.904);
-  font-size: 40px;
-}
-
-.fa:hover, .fa:focus{
-  text-decoration: none;
-  color: rgb(99, 18, 18);
-  overflow: hidden;
-}
-
-
-
-.impressum {
+.impressum-container{
   padding-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.impressum-h3{
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.impressum-text{
+  margin-top: 20px;
 }
 
 .Letzter-button {
@@ -176,13 +275,53 @@ height: 50%;
   outline-offset: 2px;
   padding: 13px 16px;
   text-transform: uppercase;
-  
+  margin-top: 40px;
 }
 
 .Letzter-button:hover{
   background-color: #5E2028;
   border: 2px solid #5E2028;
 }
+
+.Letztes-bild{
+  padding-left: 1100px;
+  margin-top: -500px;
+}
+
+.footer-fa-icon{
+  margin-left: 1265px;
+  margin-top: -60px;
+}
+
+.fa.fa-youtube {
+  color: rgba(0, 0, 0, 0.904);
+   font-size: 45px;   
+   padding-left: 10px;
+}
+
+.fa.fa-instagram{
+   color: rgba(0, 0, 0, 0.904);
+   font-size: 45px;   
+}
+
+.fa.fa-facebook {
+  color: rgba(0, 0, 0, 0.904);
+  font-size: 45px;
+  padding-left: 10px;
+}
+
+.fa.fa-pinterest {
+  color: rgba(0, 0, 0, 0.904);
+  font-size: 45px;
+  padding-left: 10px;
+}
+
+.fa:hover, .fa:focus{
+  text-decoration: none;
+  color: rgb(99, 18, 18);
+  overflow: hidden;
+}
+
 
 
 .footer-bottom {
@@ -233,118 +372,8 @@ height: 50%;
 
 
 
-/* Reset und Basis-Stile */
-body {
-  overflow-x: hidden;
-  width: 100vw;
-  margin: 0;
-}
-
-/* Hero-Sektion */
-.hero {
-  top: 0;
-  left: 0;
-  background-color: #5e2028;
-  height: 100vh;
-  width: 100vw;
-}
-
-/* Carousel-Sektion */
-#carousel {
-  height: 90vh;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  overflow-x: scroll;
-  margin: 0;
-  padding: 0 2em;
-  margin-top: 15em;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-/* Scrollbar ausblenden */
-#carousel::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* Wine Bottles-Sektion */
-.winebottles {
-  display: flex;
-  gap: 7em;
-}
-
-.winebottles > div {
-  height: fit-content;
-  width: fit-content;
-  margin: 1em;
-}
-
-.square {
-  position: relative;
-  width: 32vw;
-  height: 29vw;
-}
-
-/* Square Styling für verschiedene Kategorien */
-#dry .square,
-#halfdry .square,
-#sweet .square {
-  background-color: #58262d;
-  border: 1px solid #707070;
-}
-
-.square img {
-  width: 87%;
-  height: auto;
-  position: absolute;
-  transform: translateX(20%);
-  top: 37%;
-}
-
-.square p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  letter-spacing: 0.4px;
-  width: 50%;
-  color: white;
-  padding:1em;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-}
-
-/* Button-Gruppe */
-.buttongroup {
-  flex-direction: row;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  gap: 3em;
-}
-
-.carouselbtn {
-  position: relative;
-  opacity: 1;
-  width: 100px;
-  height: 15px;
-  background-color: #a8a8a8;
-}
-
-.carouselbtn button {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-}
-
-#span1 {
-  background-color: #000000;
-}
-
 /* Gemeinsame Styles für Text und Überschriften */
+
 h1,
 .productdetails .text {
   font-family: Arial, Helvetica, sans-serif;
@@ -363,6 +392,7 @@ h1,
   width: 171px;
   height: 432px;
 }
+
 #product {
   /* position: absolute; */
   width: 171px;
