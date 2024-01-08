@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Stylesheet.css">
-    <script src="meinSkript.js"></script>
+    <script src="meinSkript.js" defer></script>
     <title>Weintagstartseite</title>
 </head>
 
@@ -19,8 +19,39 @@
         <!-- 1.Video 
         <video width="" height="" controls>
             <source src="" type="video/mp4"> -->
+        <div class="hero">
+           
+        </div>
+
 
         <!-- 2.Produktauswahl - Slider -->
+
+        <div id="carousel">
+            <div class="winebottles">
+                <div id="dry">
+                    <div class="square">
+                        <p>Trocken</p>
+                        <img src="Logo+Icon\Weinflasche-beschriftet.png" alt="Weinflasche" />
+                    </div>
+                </div>
+                <div id="halfdry">
+                    <div class="square">
+                        <p>Halb- trocken</p>
+                        <img src="Logo+Icon\Weinflasche-beschriftet.png" alt="Weinflasche" />
+                    </div>
+                </div>
+                <div id="sweet">
+                    <div class="square">
+                        <p>Lieblich</p>
+                        <img src="Logo+Icon\Weinflasche-beschriftet.png" alt="Weinflasche" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttongroup">
+            <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
+            <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
+        </div>
 
 
         <!-- 3.Produktvostellung -->
@@ -70,6 +101,57 @@
         <!-- 5. Produkt im einzelnen  -->
         <section>
 
+            <div class="productdetails">
+                <h1>Produktdetails</h1>
+                <div id="product">
+                  <img src="Aufderwebseite\product.png" alt="" usemap="#bottlemap" />
+                  <div class="circle" id="cCircleOverlay"></div>
+                  <div class="circle" id="bCircleOverlay"></div>
+                  <div class="circle" id="lCircleOverlay"></div>
+                  <div class="circle" id="wCircleOverlay"></div>
+                  <map name="bottlemap">
+                    <area id="cCircle" alt="cork" title="cork" href="#" coords="110,29,10" shape="circle" />
+                    <area id="bCircle" alt="bottle" title="bottle" href="#" coords="50,149,10" shape="circle" />
+                    <area id="lCircle" alt="label" title="label" href="#" coords="113,231,10" shape="circle" />
+                    <area id="wCircle" alt="wine" title="wine" href="#" coords="85,396,10" shape="circle" />
+                  </map>
+            
+                </div>
+                <div class="text" id="cork">
+                  <div class="line">Korken</div>
+            
+                  Die Korken werden aus nachhaltige Ernte hergestellt. Dabei werden
+                  Korkeichen nicht gefällt, sondern geschält, was die Bäume am Leben
+                  lässt
+                </div>
+                <div class="text" id="bottle">
+                  <div class="line">Flasche</div>
+                  <p>
+                    Wir wählen Hersteller aus die leichtere Flaschen herstellen, um den
+                    Energieverbrauch während des Transports zu minimieren und das
+                    Gesamtgewicht der Flaschen zu reduzieren.
+                  </p>
+            
+                </div>
+                <div class="text" id="label">
+                  <div class="line">Label</div>
+                  <p>
+                    Wir verwenden schwarzes Papier aus recycelten Fasern. Dabei wird das
+                    Etikett mit sojabasierten Tinten bedruckt
+                  </p>
+            
+                </div>
+                <div class="text" id="wine">
+                  <div class="line">Wein</div>
+                  <p>
+                    Entdecke unseren nachhaltigen Wein aus Europa, speziell aus Italien.
+                    Fair und bewusst produziert: Ein Statement für Qualität und faire
+                    Bedingungen. Cheers!
+                  </p>
+            
+                </div>
+            
+              </div>
         </section>
 
         <!-- 6. Herstellungsprozess  -->
@@ -78,24 +160,21 @@
 
         <!-- 8. Bewertungen  -->
         <section>
-            <div class="Bewertungs-container">
-                <h2>Das sagen unsere Kunden</h2>
 
-                <div>
-                    <img src="./Aufderwebseite/Bewertungsbild.png" alt="Ein Rotwein wird ins Glas eingeschenkt"
-                        class="wine-image">
-                    <img src="./XDBilder/Bewertungen.png" alt="Bewertungen über dem Wein" class="review-image">
-                </div>
-
-                <button class="Bewertungs-button" type="button">Mehr Bewertungen lesen</button>
+            <div>
+                <img src="./Aufderwebseite/Bewertungsbild.png" alt="Ein Rotwein wird ins Glas eingeschenkt">
+                <img src="./XDBilder/Bewertungen.png" alt="Bewertungen über dem Wein">
             </div>
+
+            <button class="Bewertungs-button" type="button">Mehr Bewertungen lesen</button>
+
         </section>
 
         <!-- 9. Impressum  -->
 
         <section>
 
-            <div class="impressum-container">
+            <div class="impressum">
 
                 <h2>WEINTAG</h2>
 
@@ -104,14 +183,12 @@
                     <h3>Kontaktiere uns, bei weiteren Fragen</h3>
                 </div>
 
-                <div>
+                <div class="impressum-text">
                     <aside>WEINTAG lab. ag</aside>
                     <aside>Weingassenallee 8</aside>
                     <aside>70569 Stuttgart</aside>
                     <aside>Deutschland</aside>
-                </div>
 
-                <div class="impressum-text">
                     <aside>info@weintag-genuss.de</aside>
                     <aside>+49 123 4567890</aside>
                 </div>
