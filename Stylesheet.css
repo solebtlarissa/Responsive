@@ -43,7 +43,7 @@ body {
 /*Schrift*/
 
 h2 {
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -51,13 +51,13 @@ h2 {
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.1;
 }
 
 p, aside{
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.3;
   margin-left: auto;
 }
@@ -712,8 +712,6 @@ h1,
 
   
   #CallToAction-Button {
-    font-size: 14px;
-    padding: 10px 12px;
     width: 100%;  /* Button breiter machen */
   }
 
@@ -777,8 +775,6 @@ h1,
   }
 
   .Letzter-button {
-    font-size: 14px;
-    padding: 10px 12px;
     width: 100%;
   }
 
