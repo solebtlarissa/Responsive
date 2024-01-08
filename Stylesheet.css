@@ -176,7 +176,6 @@ p, aside{
 }
 
 
-
 .Produktvorstellung-container {
   display: flex;
   align-items: center;
@@ -190,7 +189,6 @@ p, aside{
   left: 0;
   height: 100vh;
   width: 100vw;
-
 }
 
 .Produktvorstellung-Text {
@@ -222,9 +220,168 @@ p, aside{
   background-color: #5E2028;
   border: 2px solid #5E2028;
 }
+#CallToAction-Button:first-child{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Kreise und Overlays für Produkt-Details */
 
 
 
+area {
+  outline: 1px solid #a8a8a8;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.circle {
+  position: relative;
+  background-color: #a8a8a8;
+  /* Set the default background color */
+  border-radius: 50%;
+  /* Create a circular shape */
+  z-index: 99;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  /* Initially hide the circles */
+}
+
+#cCircleOverlay {
+  bottom: 420px;
+    left: 101px;
+}
+
+#bCircleOverlay {
+  bottom: 320px;
+  left: 39px;
+}
+
+#lCircleOverlay {
+  bottom: 258px;
+  left: 104px;
+}
+
+#wCircleOverlay {
+  bottom: 113px;
+  left: 76px;
+}
+
+#cork {
+  padding-top: 10px;
+  margin-top: 28px;}
+
+
+
+#bottle {
+  padding-top: 10px;
+  margin-top: -83px;
+  grid-template-columns: 60% 40%;
+}
+#wine{
+  grid-template-columns: 60% 40%;
+
+}
+#bottle div{
+  grid-area: 1/2;
+}
+#bottle p{
+  grid-area: 1/1;
+}
+
+#label {
+  padding-top: 10px;
+  margin-top: 28px;}
+
+#wine {
+  padding-top: 10px;
+  margin-top: 28px;
+}
+
+  #wine div{
+    grid-area: 1/2;
+  }
+  #wine p{
+    grid-area: 1/1;
+  }
+
+.wein-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+  }
+
+.wein-title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+#wein-kasten {
+    border-right: 2px solid black; /* Ändere die Eigenschaften der Linie nach Bedarf */
+    padding-right: 20px; /* Füge einen Abstand zwischen dem Bild und der Linie hinzu */
+}
+
+.wein-description {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px; /* Füge einen Abstand zwischen der Linie und dem Text hinzu */
+    max-width: 50%;
+}
+
+.wein-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 40px;
+  padding-left: 10px;
+    margin-top: 20px;
+  }
+ 
+.wein-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    width: auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+  }
+  
+#Weinkiste-icon{
+  width: 5px;
+}  
+
+.Location-icon, .Traube-icon, .Weinkiste-icon, .Temperatur-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 20%;  /* Flex-Basis auf 20% setzen, damit nicht mehr als 5 Elemente in einer Zeile sind */
+}
+
+.Location-icon img, .Traube-icon img, .Weinkiste-icon img, .Temperatur-icon img {
+  margin-bottom: 10px;  /* Abstand zwischen dem Bild und dem Text */
+}  
+
+.Bewertungs-container{
+  padding-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.Bewertungsbild{
+  top: 0;
+  left: 0;
+  height: auto;
+  max-height: 100%;
+  /* Das Bild bleibt innerhalb der Höhe des Headers */
+  width: auto;
+  max-width: 100%;
+}
 
 .Bewertungs-button{
   background-color: #a8a8a8;
@@ -260,6 +417,7 @@ p, aside{
 
 .impressum-text{
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .Letzter-button {
@@ -275,7 +433,7 @@ p, aside{
   outline-offset: 2px;
   padding: 13px 16px;
   text-transform: uppercase;
-  margin-top: 40px;
+  
 }
 
 .Letzter-button:hover{
@@ -365,7 +523,7 @@ p, aside{
   text-align: right;
   font-weight: 700;
   color: #FFFFFF;
-  margin-top: 10px; /* Ändere den Wert nach Bedarf */
+  margin-top: 10px; 
 }
 
 /* --------------------------*/
@@ -427,111 +585,10 @@ h1,
   font-family:Arial, Helvetica, sans-serif
 }
 
-/* Kreise und Overlays für Produkt-Details */
-
-
-
-area {
-  outline: 1px solid #a8a8a8;
-}
-
-.visible {
-  visibility: visible !important;
-}
-
-.circle {
-  position: relative;
-  background-color: #a8a8a8;
-  /* Set the default background color */
-  border-radius: 50%;
-  /* Create a circular shape */
-  z-index: 99;
-  width: 20px;
-  height: 20px;
-  visibility: hidden;
-  /* Initially hide the circles */
-}
-
-#cCircleOverlay {
-  bottom: 420px;
-    left: 101px;
-}
-
-#bCircleOverlay {
-  bottom: 320px;
-  left: 39px;
-}
-
-#lCircleOverlay {
-  bottom: 258px;
-  left: 104px;
-}
-
-#wCircleOverlay {
-  bottom: 113px;
-  left: 76px;
-}
-
-#cork {
-  padding-top: 10px;
-  margin-top: 28px;}
-
-
-
-#bottle {
-  padding-top: 10px;
-  margin-top: -83px;
-  grid-template-columns: 60% 40%;
-}
-#wine{
-  grid-template-columns: 60% 40%;
-
-}
-#bottle div{
-  grid-area: 1/2;
-}
-#bottle p{
-  grid-area: 1/1;
-}
-
-#label {
-  padding-top: 10px;
-  margin-top: 28px;}
-
-#wine {
-  padding-top: 10px;
-  margin-top: 28px;}
-
-  #wine div{
-    grid-area: 1/2;
-  }
-  #wine p{
-    grid-area: 1/1;
-  }
 
 
 /* Responsive-Styles für kleine Bildschirme */
 @media screen and (max-width: 600px) {
-  .square {
-    width: 90vw;
-    height: 85vw;
-  }
-
-  .square p {
-    font-size: 2em;
-  }
-
-  #carousel {
-    height: 70vh;
-  }
-}
-
-
-
-/* --------------------------*/
-
-
-@media only screen and (max-width: 767px) {
   header {
     width: 25%;
     /* Der Header erstreckt sich über die volle Breite des Bildschirms */
@@ -544,9 +601,161 @@ area {
     /* Beispiel: Reduziere die maximale Breite des neuen Bildes auf 70px */
   }
 
-  .Produktvorstellung-container {
-    display: flex;
+  .winebottles {
+    flex-direction: column;
     align-items: center;
-    background-image: url(./Aufderwebseite/Handy_Flaschen.png);
   }
+
+  .winebottles > div {
+    margin: 1em 0;
+  }
+
+  .square {
+    width: 80vw;
+    height: 72vw;
+  }
+
+  .square img {
+    transform: translateX(50%);
+    top: 30%;
+  }
+
+  .square p {
+    font-size: 20px;
+    width: 70%;
+  }
+
+  #carousel {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1em 0;
+  }
+  .buttongroup {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+  }
+  
+  .carouselbtn {
+    width: 80px;  /* Reduzierte Breite */
+    height: 12px;  /* Reduzierte Höhe */
+    background-color: #a8a8a8;
+    margin: 0 10px;
+
+  }
+  
+  .carouselbtn button {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  .Produktvorstellung-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    height: auto;
+    background-image: url(./Aufderwebseite/Handy_Flaschen.png);
+    background-size: 150%; /* Erhöht die Größe des Hintergrundbildes */
+    background-clip: padding-box;
+  }
+  
+  .Produktvorstellung-Text {
+    max-width: 80%; 
+    text-align: left;
+  }
+
+  
+  #CallToAction-Button {
+    font-size: 14px;
+    padding: 10px 12px;
+    width: 100%;  /* Button breiter machen */
+  }
+
+  .wein-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wein-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .wein-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .wein-description {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .wein-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .wein-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+  }
+
+
+  .impressum-container {
+    padding-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    background-clip: padding-box;
+  }
+
+  .impressum-h3 {
+    margin-bottom: 12px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .impressum-text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .Letzter-button {
+    font-size: 14px;
+    padding: 10px 12px;
+    width: 100%;
+  }
+
+  .Letztes-bild {
+    padding-left: 50px;
+    margin-top: -250px;
+  }
+
+  .footer-fa-icon {
+    margin-left: 10px;  /* Reduzierte linke Seitenränder */
+    margin-top: 0;  /* Reduzierte obere Seitenränder */
+  }
+
+  .fa {
+    font-size: 30px;  /* Reduzierte Schriftgröße */
+  }
+
 }
+
+@media screen and (max-width: 1080px) {
+
+}
+
+
