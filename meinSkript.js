@@ -1,29 +1,74 @@
-// let slideIndex = 1;
-// showSlides(slideIndex);
 
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
+let slideIndex = 0;
+showSlides();
 
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
+// Next/previous controls
+function plusSlides(n) {
+  slideIndex += n;
+  showSlides();
+}
 
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let corner = document.getElementsByClassName("corner");
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";  
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-//   corner[slideIndex-1].className += " active";
-// }
+// Thumbnail image controls
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides();
+}
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = slideIndex; i < slideIndex + 3; i++) {
+    if (slides[i]) {
+      slides[i].style.display = "block";
+    } else {
+      // Wenn weniger als drei Bilder angezeigt werden, beginnen wir wieder von vorne
+      slides[i % slides.length].style.display = "block";
+    }
+  }
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 3;
+  }
+}
+
+/*
+let slideIndex = 0;
+showSlides();
+
+// Next/previous controls
+function plusSlides(n) {
+  slideIndex += n * 3; // Ändern Sie den Index um die Anzahl der gleichzeitig angezeigten Bilder
+  showSlides();
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  slideIndex = n * 3; // Ändern Sie den Index um die Anzahl der gleichzeitig angezeigten Bilder
+  showSlides();
+}
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = slideIndex; i < slideIndex + 3 && i < slides.length; i++) {
+    slides[i].style.display = "block";
+  }
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  if (slideIndex < 0) {
+    slideIndex = slides.length - (slides.length % 3);
+  }
+}
+*/
 
 
 // ------------------------------------------

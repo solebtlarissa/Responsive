@@ -14,8 +14,8 @@ header{
 
 header a {
   background-color: rgba(0, 0, 0, 0.6);
-  height: 40px;
-  width: 200px;
+  height: 52px;
+  width: 260px;
   position: fixed;
   top: 0;
   display: flex;
@@ -29,7 +29,6 @@ header img {
   /* Das Bild bleibt innerhalb der Höhe des Headers */
   width: auto;
   max-width: 100%;
-  /* Das Bild bleibt innerhalb der Breite des Headers */
 }
 
 /* Reset und Basis-Stile */
@@ -212,7 +211,7 @@ p, aside{
   font-weight: 700;
   line-height: 1;
   outline-offset: 2px;
-  padding: 13px 16px;
+  padding: 15px 35px;
   text-transform: uppercase;
 }
 
@@ -221,14 +220,9 @@ p, aside{
   border: 2px solid #5E2028;
 }
 
-#CallToAction-Button:first-child{
-  margin-right: 0;
-  margin-left: 0;
-}
-
 
 /* 5. Produkt im einzelnen  */
-.wein-container {
+.weinvorstellungs-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -247,6 +241,17 @@ p, aside{
   padding-right: 20px; /* Füge einen Abstand zwischen dem Bild und der Linie hinzu */
 }
 
+#wein-kasten .square {
+  width: 100%;
+  max-width: 300px;
+}
+
+.wein-description p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .wein-description {
   font-size: 18px;
   text-align: left;
@@ -255,38 +260,105 @@ p, aside{
   max-width: 50%;
 }
 
-.wein-icons {
+.weinicons-bereich {
   display: flex;
   justify-content: space-around;
   width: 40px;
-padding-left: 10px;
+  padding-left: 10px;
   margin-top: 20px;
 }
 
-.wein-button {
-  font-size: 18px;
-  padding: 10px 20px;
+.weinicons-bereich div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weinicons-bereich img {
+  width: 60px;
+  height: 80px;
+}
+
+
+/* Herstellungsprozess */
+.Herstellungsprozess-container{
+  padding: 0 70px;
+  margin-bottom: 130px;
+  margin-top: 100px;
+}
+
+.slideshow-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+ 
+}
+
+/* Show three images by default */
+.mySlides {
+  width: calc((100% - 160px) / 3);
+  flex-shrink: 0;
+}
+
+.mySlides img {
+  width: 100%; /* Stellt sicher, dass das Bild den gesamten Container einnimmt */
+  height: 100%; /* Behält das Seitenverhältnis des Bildes bei */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
   width: auto;
-  text-align: center;
-  background-color: black;
+  margin-top: -22px;
+  padding: 16px;
   color: white;
-  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2; /* Stellt sicher, dass die Pfeile über den Bildern angezeigt werden */
+  background-color: rgba(0,0,0,0.8); /* Fügt einen Hintergrund hinzu, um die Pfeile sichtbar zu machen */
 }
 
-#Weinkiste-icon{
-width: 5px;
-}  
-
-.Location-icon, .Traube-icon, .Weinkiste-icon, .Temperatur-icon {
-display: flex;
-flex-direction: column;
-align-items: center;
-flex: 1 0 20%;  /* Flex-Basis auf 20% setzen, damit nicht mehr als 5 Elemente in einer Zeile sind */
+.next {
+  right: -50px; /* Verschiebt den Pfeil nach rechts */
 }
 
-.Location-icon img, .Traube-icon img, .Weinkiste-icon img, .Temperatur-icon img {
-margin-bottom: 10px;  /* Abstand zwischen dem Bild und dem Text */
-} 
+.prev {
+  left: -50px; /* Verschiebt den Pfeil nach links */
+}
+
+.prev:hover, .next:hover {
+  background-color: #5E2028;
+}
+
+/* Caption text */
+#text {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.andereKlasse{
+  display: none;
+}
 
 /* Kreise und Overlays für Produkt-Details */
 area {
@@ -392,35 +464,45 @@ area {
 
 .Bewertungs-text {
   width: 40%;
-  margin-right: 180px;
+  margin-right: 120px;
 }
 
-.Bewertungs-text div {
-  margin-bottom: 20px;
+.Bewertungs-text > div {
+  margin-bottom: 10px;
+}
+
+.Bewertungs-text > div > div {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .Bewertungs-text h3 {
   color: #333;
   display: flex;
-  align-items: center;
-  
+  align-items: left;
 }
 
 #grauer-text{
   color: #A8A8A8;
+  margin-left: 0px;
 }
 
-.icon-container {
+.bewertungsicon-container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
-.icon-container::before {
-  content: url(./Logo+Icon/RotesGlas.png) repeat-x; /* replace with the path to your icon */
-  background-repeat: repeat-x repeat(5);
-  margin-right: 5px; /* adjust as needed for spacing between icon and text */
-  width: 10px;
-  height: 10px;
+.bewertungsicon-container img {
+  width: 6vh; 
+  height: 11vh;
+  margin-right: 12px; 
+}
+
+#GrauesGlas{
+  width: 5.8vh; 
+  height: 11vh;
 }
 
 .Bewertungs-button{
@@ -434,9 +516,9 @@ area {
   font-weight: 700;
   line-height: 1;
   outline-offset: 2px;
-  padding: 13px 16px;
+  padding: 15px 35px;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .Bewertungs-button:hover {
@@ -447,17 +529,17 @@ area {
 
 /* 9.Impressum  */
 
-.impressum-container{
+.impressum-container {
   padding-left: 70px;
   margin-bottom: 80px;
 }
 
-.impressum-h3{
+.impressum-h3 {
   margin-bottom: 25px;
   margin-top: 20px;
 }
 
-.impressum-text{
+.impressum-text {
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -473,24 +555,23 @@ area {
   font-weight: 700;
   line-height: 1;
   outline-offset: 2px;
-  padding: 13px 16px;
+  padding: 15px 35px;
   text-transform: uppercase;
-  
 }
 
-.Letzter-button:hover{
+.Letzter-button:hover {
   background-color: #5E2028;
   border: 2px solid #5E2028;
 }
 
-.Letztes-bild{
+.Letztes-bild {
   padding-left: 1100px;
   margin-top: -500px;
   width: 40px;
   height: 50%;
 }
 
-.footer-fa-icon{
+.footer-fa-icon {
   margin-left: 1265px;
   margin-top: -60px;
 }
@@ -524,8 +605,7 @@ area {
   overflow: hidden;
 }
 
-
-
+/* Footer */
 .footer-bottom {
   height: 22.8vh;
   background-color: #5E2028;
@@ -632,17 +712,17 @@ h1,
 
 
 /* Responsive-Styles für kleine Bildschirme */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   header {
-    width: 25%;
-    /* Der Header erstreckt sich über die volle Breite des Bildschirms */
+    width: 25%; /* Der Header erstreckt sich über die volle Breite des Bildschirms */
+    height: auto;
   }
 
   header img {
     content: url('./Logo+Icon/W-Logo.png');
-    /* Pfad zu deinem neuen Bild */
+    width: 60px;
     max-width: 1000px;
-    /* Beispiel: Reduziere die maximale Breite des neuen Bildes auf 70px */
+  
   }
 
   .winebottles {
@@ -675,20 +755,20 @@ h1,
     height: auto;
     padding: 1em 0;
   }
+
   .buttongroup {
     display: flex;
     justify-content: center;
-    gap: 3em;
+    gap: 1.5em;  /* Reduzierter Abstand */
   }
-  
-  .carouselbtn {
-    width: 80px;  /* Reduzierte Breite */
-    height: 12px;  /* Reduzierte Höhe */
-    background-color: #a8a8a8;
-    margin: 0 10px;
 
+  .carouselbtn {
+    width: 40px;  /* Reduzierte Breite */
+    height: 6px;  /* Reduzierte Höhe */
+    background-color: #a8a8a8;
+    margin: 0 5px;  /* Reduzierter Rand */
   }
-  
+
   .carouselbtn button {
     width: 100%;
     height: 100%;
@@ -710,12 +790,11 @@ h1,
     text-align: left;
   }
 
-  
   #CallToAction-Button {
     width: 100%;  /* Button breiter machen */
   }
 
-  .wein-container {
+  .weinvorstellungs-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -745,16 +824,77 @@ h1,
   }
 
   .wein-button {
-    font-size: 18px;
-    padding: 10px 20px;
     width: 100%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    margin-top: 20px;
+    box-sizing: border-box; 
   }
 
+  .Herstellungsprozess-container{
+    padding: 0 35px;
+    margin-bottom: 65px;
+    margin-top: 50px;
+  }
 
+  .slideshow-container {
+    flex-direction: row;
+    overflow: hidden; /* Versteckt das angeschnittene Bild */
+  }
+
+  .mySlides {
+    width: 100%;
+    min-width: 50%; /* Stellt sicher, dass mindestens ein Bild vollständig angezeigt wird */
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: auto; 
+  }
+
+  .prev, .next, .numbertext {
+    display: none;
+  }
+  .andereKlasse {
+    display: block;
+  }
+  .andereKlasse .buttongroup {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;  /* Reduzierter Abstand */
+}
+
+  .Bewertungs-container {
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+
+  .Bewertung-drumherum {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Bewertung-drumherum img {
+    display: none; /* Das Bild wird nicht angezeigt */
+  }
+
+  .Bewertungs-text {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .Bewertungs-text div {
+    margin-bottom: 10px;
+  }
+
+  .bewertungsicon-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Bewertungs-button{
+    width: calc(100% - 10px);
+    margin: 0px 0px 20px;
+    box-sizing: border-box; 
+  }
   .impressum-container {
     padding-left: 20px;
     margin-top: 25px;
@@ -775,12 +915,18 @@ h1,
   }
 
   .Letzter-button {
-    width: 100%;
+    width: calc(100% - 10px); /* Make the button slightly smaller with equal padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin: 0px 0px 20px; /* Add top and bottom margin, and equal left and right margin */
+   
   }
 
   .Letztes-bild {
     padding-left: 50px;
     margin-top: -250px;
+  }
+  .Letztes-bild img{
+    width: 400px;
   }
 
   .footer-fa-icon {
