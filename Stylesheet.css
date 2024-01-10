@@ -323,6 +323,24 @@ aside {
   height: 80px;
 }
 
+#Location-icon{
+  width: 12px;
+  height: 29px;
+}
+
+#Traube-icon{
+  width: 106px;
+  height: 125px;
+}
+#Weinkiste-icon{
+  width: 128px;
+  height: 128px;
+}
+#Temperatur-icon{
+  width: 86px;
+  height: 140px;
+}
+
 #icontext{
   font-size: 18px;
   color: #191919f7;
@@ -457,8 +475,6 @@ padding: 0 70px;
   justify-self: center;
 
 }
-
-
 
 /* Gemeinsame Styles für Text mit Linie */
 .text {
@@ -688,14 +704,14 @@ area {
 }
 
 .Letztes-bild {
-  padding-left: 1100px;
+  padding-left: 1000px;
   margin-top: -500px;
   width: 40px;
   height: 50%;
 }
 
 .footer-fa-icon {
-  margin-left: 1265px;
+  margin-left: 1162px;
   margin-top: -60px;
 }
 
