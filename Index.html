@@ -16,13 +16,15 @@
 
 
     <main>
-        <!-- 1.Video 
-        <video width="" height="" controls>
-            <source src="" type="video/mp4"> -->
-        <div class="hero">
 
-        </div>
-
+        <!-- 1.Video -->
+        <section>
+            <div class="hero">
+                <video autoplay muted loop id="myVideo">
+                    <source src="rain.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
 
         <!-- 2.Produktauswahl - Slider -->
         <section>
@@ -100,105 +102,84 @@
 
         <!-- 5. Produktmerkmale  -->
         <section>
+            <div class="productdetails-section">
+                <div class="productdetails">
+                    <h2>Produktdetails</h2>
 
-            <div class="productdetails">
-                <h1>Produktdetails</h1>
+                    <div id="product">
+                        <img src="Aufderwebseite\product.png" alt="" usemap="#bottlemap" />
+                        <div class="circle" id="cCircleOverlay"></div>
+                        <div class="circle" id="bCircleOverlay"></div>
+                        <div class="circle" id="lCircleOverlay"></div>
+                        <div class="circle" id="wCircleOverlay"></div>
 
-                <div id="product">
-                    <img src="Aufderwebseite\product.png" alt="" usemap="#bottlemap" />
-                    <div class="circle" id="cCircleOverlay"></div>
-                    <div class="circle" id="bCircleOverlay"></div>
-                    <div class="circle" id="lCircleOverlay"></div>
-                    <div class="circle" id="wCircleOverlay"></div>
+                        <map name="bottlemap">
+                            <area id="cCircle" alt="cork" title="cork" href="#" coords="110,29,10" shape="circle" />
+                            <area id="bCircle" alt="bottle" title="bottle" href="#" coords="50,149,10" shape="circle" />
+                            <area id="lCircle" alt="label" title="label" href="#" coords="113,231,10" shape="circle" />
+                            <area id="wCircle" alt="wine" title="wine" href="#" coords="85,396,10" shape="circle" />
+                        </map>
 
-                    <map name="bottlemap">
-                        <area id="cCircle" alt="cork" title="cork" href="#" coords="110,29,10" shape="circle" />
-                        <area id="bCircle" alt="bottle" title="bottle" href="#" coords="50,149,10" shape="circle" />
-                        <area id="lCircle" alt="label" title="label" href="#" coords="113,231,10" shape="circle" />
-                        <area id="wCircle" alt="wine" title="wine" href="#" coords="85,396,10" shape="circle" />
-                    </map>
+                    </div>
+
+                    <div class="text" id="cork">
+                        <div class="line">Korken</div>
+
+                        Die Korken werden aus nachhaltige Ernte hergestellt. Dabei werden
+                        Korkeichen nicht gefällt, sondern geschält, was die Bäume am Leben
+                        lässt
+                    </div>
+
+                    <div class="text" id="bottle">
+                        <div class="line">Flasche</div>
+                        <p>
+                            Wir wählen Hersteller aus die leichtere Flaschen herstellen, um den
+                            Energieverbrauch während des Transports zu minimieren und das
+                            Gesamtgewicht der Flaschen zu reduzieren.
+                        </p>
+
+                    </div>
+
+                    <div class="text" id="label">
+                        <div class="line">Label</div>
+                        <p>
+                            Wir verwenden schwarzes Papier aus recycelten Fasern. Dabei wird das
+                            Etikett mit sojabasierten Tinten bedruckt
+                        </p>
+
+                    </div>
+
+                    <div class="text" id="wine">
+                        <div class="line">Wein</div>
+                        <p>
+                            Entdecke unseren nachhaltigen Wein aus Europa, speziell aus Italien.
+                            Fair und bewusst produziert: Ein Statement für Qualität und faire
+                            Bedingungen. Cheers!
+                        </p>
+
+                    </div>
 
                 </div>
-
-                <div class="text" id="cork">
-                    <div class="line">Korken</div>
-
-                    Die Korken werden aus nachhaltige Ernte hergestellt. Dabei werden
-                    Korkeichen nicht gefällt, sondern geschält, was die Bäume am Leben
-                    lässt
-                </div>
-
-                <div class="text" id="bottle">
-                    <div class="line">Flasche</div>
-                    <p>
-                        Wir wählen Hersteller aus die leichtere Flaschen herstellen, um den
-                        Energieverbrauch während des Transports zu minimieren und das
-                        Gesamtgewicht der Flaschen zu reduzieren.
-                    </p>
-
-                </div>
-
-                <div class="text" id="label">
-                    <div class="line">Label</div>
-                    <p>
-                        Wir verwenden schwarzes Papier aus recycelten Fasern. Dabei wird das
-                        Etikett mit sojabasierten Tinten bedruckt
-                    </p>
-
-                </div>
-
-                <div class="text" id="wine">
-                    <div class="line">Wein</div>
-                    <p>
-                        Entdecke unseren nachhaltigen Wein aus Europa, speziell aus Italien.
-                        Fair und bewusst produziert: Ein Statement für Qualität und faire
-                        Bedingungen. Cheers!
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!--
-            <div id="dry">
-                <div class="square">
-                    <p>Trocken</p>
-                    <img src="./Logo+Icon/No.834.png" alt="Weinflasche" />
-                </div>
-            </div>
-            <div id="halfdry">
-                <div class="square">
-                    <p>Halb- trocken</p>
-                    <img src="./Logo+Icon/No.834.png" alt="Weinflasche" />
-                </div>
-            </div>
-            <div id="sweet">
-                <div class="square">
-                    <p>Lieblich</p>
-                    <img src="./Logo+Icon/No.834.png" alt="Weinflasche" />
-                </div>
-            </div>
-
-            </div>
-            <div class="buttongroup">
-                <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
-                <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
             </div>
         </section>
 
-        6. Produkt im einzelnen  -->
-            <section>
-                <div class="weinvorstellungs-container">
-                    <div class="abstandrechts">
-                        <div id="halfdry">
-                            <div class="weinsquare">
-                                <p>Halb- trocken</p>
-                                <img src="./Logo+Icon/No.834.png" alt="Wein No. 834">
-                            </div>
+
+
+        <!--6. Produkt im einzelnen  -->
+        <section>
+            <div class="weinvorstellungs-container">
+                <div class="abstandrechts">
+                    <div id="halfdry">
+                        <div class="weinsquare">
+                            <p>Halb- trocken</p>
+                            <img src="./Logo+Icon/No.834.png" alt="Wein No. 834">
                         </div>
                     </div>
-                    <div id="vertikale-linie"> </div>
+                </div>
 
+                <div id="vertikale-linie"> </div>
+
+                <div class="wein-description">
 
                     <div class="überschriften">
                         <h2>WEIN NO.834</h2>
@@ -209,21 +190,20 @@
                         </div>
                     </div>
 
-                    <div class="wein-description">
+                    <div class="wein-text">
                         <p>Wein No. 834, Jahrgang 2020, vereint Rebsorten aus Merlot und Pinot Noir.
-                            Das
-                            Bouquet präsentiert florale Noten,aromatische Kräuter und reife Früchte. Kräftige
-                            Tannine
-                            verleihen dem Wein Lebendigkeit und Frische, begleitet vonGewürznuancen wie weißem
-                            Pfeffer im
-                            Abgang.
+                            Das Bouquet präsentiert florale Noten, aromatische Kräuter und reife Früchte.
+                            Kräftige Tannine verleihen dem Wein Lebendigkeit und Frische, begleitet vonGewürznuancen
+                            wie weißem
+                            Pfeffer imAbgang.
                         </p>
+
 
                         <div class="weinicons-bereich">
 
                             <div id="Location-icon">
                                 <img src="./Logo+Icon/Location.png" alt="Location">
-                                <p>Italien</p>
+                                <p id="icontext">Italien</p>
                             </div>
 
                             <div id="Traube-icon">
@@ -249,152 +229,155 @@
 
                     </div>
 
-                    <div class="andereKlasse2">
-                        <div class="buttongroup">
-                            <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
-                            <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
-                        </div>
-                    </div>
-
                 </div>
 
-            </section>
-
-            <!-- 7. Herstellungsprozess  -->
-            <section>
-                <div class="Herstellungsprozess-container">
-                    <h2> Herstellungsprozess</h2>
-
-                    <div class="slideshow-container">
-                        <!-- Full-width images with number and caption text -->
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/1.Weinfelder.jpg" alt="Weinfelder">
-                            <p id="text">Weinfelder</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/2.Traubenauswahl.jpg" alt="Traubenauswahl">
-                            <p id="text">Traubenauswahl</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/3.Ernte.jpg" alt="Ernte">
-                            <p id="text">Ernte</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/4.Entrappung_Quetschung.jpg" alt="Entrappung und Quetschung">
-                            <p id="text">Entrappung und Quetschung</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/5.Reifung.jpg" alt="Reifung">
-                            <p id="text">Reifung</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/6.Abpressen.jpg" alt="Abpressen">
-                            <p id="text">Abpressen</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/7.Assemblage_(Verschnitt).jpg" alt="Assemblage_(Verschnitt)">
-                            <p id="text">Assemblage (Verschnitt)</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="./Aufderwebseite/8.Abfüllen.jpg" alt="Abfüllen">
-                            <p id="text">Abfüllen</p>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img id="bild9" src="./Aufderwebseite/9.Verpacken_Etikettieren.png"
-                                alt="Verpacken_Etikettieren">
-                            <p id="text">Verpacken und Etikettieren</p>
-                        </div>
-
-
-
-                        <!-- Next and previous buttons -->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <div class="andereKlasse">
-                        <div class="buttongroup">
-                            <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
-                            <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
-                            <span id="span3" class="carouselbtn"><button role="button" id="btn3"></button></span>
-                            <span id="span4" class="carouselbtn"><button role="button" id="btn4"></button></span>
-                            <span id="span5" class="carouselbtn"><button role="button" id="btn5"></button></span>
-                            <span id="span6" class="carouselbtn"><button role="button" id="btn6"></button></span>
-                            <span id="span7" class="carouselbtn"><button role="button" id="btn7"></button></span>
-                            <span id="span8" class="carouselbtn"><button role="button" id="btn8"></button></span>
-                            <span id="span9" class="carouselbtn"><button role="button" id="btn9"></button></span>
-                        </div>
+                <div class="andereKlasse2">
+                    <div class="buttongroup">
+                        <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
+                        <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
                     </div>
                 </div>
-            </section>
 
-            <!-- 8. Bewertungen -->
-            <section>
-                <div class="Bewertungs-container">
-                    <h2>DAS SAGEN UNSERE KUNDEN </h2>
+            </div>
+            <div class="abstand"></div>
+        </section>
 
-                    <div class="Bewertung-drumherum">
-                        <img src="./Aufderwebseite/Bewertungsbild.png" alt="Wine pouring into a glass">
+        <!-- 7. Herstellungsprozess  -->
+        <section>
+            <div class="Herstellungsprozess-container">
+                <h2> Herstellungsprozess</h2>
 
-                        <div class="Bewertungs-text">
-                            <div>
-                                <div class="bewertungsicon-text-container">
-                                    <div class="bewertungsicon-container">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                    </div>
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/1.Weinfelder.jpg" alt="Weinfelder">
+                        <p id="text">Weinfelder</p>
+                    </div>
 
-                                    <div>
-                                        <h3>Sehr Lecker!!!</h3>
-                                    </div>
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/2.Traubenauswahl.jpg" alt="Traubenauswahl">
+                        <p id="text">Traubenauswahl</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/3.Ernte.jpg" alt="Ernte">
+                        <p id="text">Ernte</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/4.Entrappung_Quetschung.jpg" alt="Entrappung und Quetschung">
+                        <p id="text">Entrappung und Quetschung</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/5.Reifung.jpg" alt="Reifung">
+                        <p id="text">Reifung</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/6.Abpressen.jpg" alt="Abpressen">
+                        <p id="text">Abpressen</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/7.Assemblage_(Verschnitt).jpg" alt="Assemblage_(Verschnitt)">
+                        <p id="text">Assemblage (Verschnitt)</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./Aufderwebseite/8.Abfüllen.jpg" alt="Abfüllen">
+                        <p id="text">Abfüllen</p>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img id="bild9" src="./Aufderwebseite/9.Verpacken_Etikettieren.png"
+                            alt="Verpacken_Etikettieren">
+                        <p id="text">Verpacken und Etikettieren</p>
+                    </div>
+
+
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="andereKlasse">
+                    <div class="buttongroup">
+                        <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
+                        <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
+                        <span id="span3" class="carouselbtn"><button role="button" id="btn3"></button></span>
+                        <span id="span4" class="carouselbtn"><button role="button" id="btn4"></button></span>
+                        <span id="span5" class="carouselbtn"><button role="button" id="btn5"></button></span>
+                        <span id="span6" class="carouselbtn"><button role="button" id="btn6"></button></span>
+                        <span id="span7" class="carouselbtn"><button role="button" id="btn7"></button></span>
+                        <span id="span8" class="carouselbtn"><button role="button" id="btn8"></button></span>
+                        <span id="span9" class="carouselbtn"><button role="button" id="btn9"></button></span>
+                    </div>
+                </div>
+            </div>
+            <div class="abstand"></div>
+        </section>
+
+        <!-- 8. Bewertungen -->
+        <section>
+            <div class="Bewertungs-container">
+                <h2>DAS SAGEN UNSERE KUNDEN </h2>
+
+                <div class="Bewertung-drumherum">
+                    <img src="./Aufderwebseite/Bewertungsbild.png" alt="Wine pouring into a glass">
+
+                    <div class="Bewertungs-text">
+                        <div>
+                            <div class="bewertungsicon-text-container">
+                                <div class="bewertungsicon-container">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
                                 </div>
 
                                 <div>
-                                    <p id="grauer-text">Von: Lisa H.</p>
-                                    <p>Sehr zugänglich und trotzdem viel zu entdecken. Sehr geringer Trinkwiderstand.
-                                        Nur
-                                        zum
-                                        Empfehlen!</p>
+                                    <h3>Sehr Lecker!!!</h3>
                                 </div>
                             </div>
 
-                            <hr>
-
                             <div>
-                                <div class="bewertungsicon-text-container">
-                                    <div class="bewertungsicon-container">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
-                                        <img id="GrauesGlas" src="./Logo+Icon/GrauesGlas.png" alt="Graues weinglas">
-                                    </div>
+                                <p id="grauer-text">Von: Lisa H.</p>
+                                <p>Sehr zugänglich und trotzdem viel zu entdecken. Sehr geringer Trinkwiderstand.
+                                    Nur
+                                    zum
+                                    Empfehlen!</p>
+                            </div>
+                        </div>
 
-                                    <div>
-                                        <h3>Ist eine Empfehlung wert</h3>
-                                    </div>
+                        <hr>
+
+                        <div>
+                            <div class="bewertungsicon-text-container">
+                                <div class="bewertungsicon-container">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img src="./Logo+Icon/RotesGlas.png" alt="Rotes weinglas">
+                                    <img id="GrauesGlas" src="./Logo+Icon/GrauesGlas.png" alt="Graues weinglas">
                                 </div>
 
                                 <div>
-                                    <p id="grauer-text">Von: Pauli</p>
-                                    <p>Sehr zugänglich und trotzdem viel zu entdecken. Sehr geringer Trinkwiderstand.
-                                        Nur
-                                        zum
-                                        Empfehlen!</p>
+                                    <h3>Ist eine Empfehlung wert</h3>
                                 </div>
                             </div>
 
-                            <!--
+                            <div>
+                                <p id="grauer-text">Von: Pauli</p>
+                                <p>Sehr zugänglich und trotzdem viel zu entdecken. Sehr geringer Trinkwiderstand.
+                                    Nur
+                                    zum
+                                    Empfehlen!</p>
+                            </div>
+                        </div>
+
+                        <!--
                         <hr>
 
                         <div>
@@ -422,57 +405,57 @@
                         </div>   
                     -->
 
-                            <button class="Bewertungs-button" type="button">Mehr Bewertungen lesen</button>
+                        <button class="Bewertungs-button" type="button">Mehr Bewertungen lesen</button>
 
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- 9. Impressum -->
-            <section>
-
-                <div class="impressum-container">
-
-                    <h2>WEINTAG</h2>
-
-
-                    <div class="impressum-h3">
-                        <h3>Kontaktiere uns, bei weiteren Fragen</h3>
-                    </div>
-
-                    <div>
-                        <aside>WEINTAG lab. ag</aside>
-                        <aside>Weingassenallee 8</aside>
-                        <aside>70569 Stuttgart</aside>
-                        <aside>Deutschland</aside>
-                    </div>
-
-                    <div class="impressum-text">
-                        <aside>info@weintag-genuss.de</aside>
-                        <aside>+49 123 4567890</aside>
-                    </div>
-
-                    <button class="Letzter-button" type="button">Erfahre mehr über uns</button>
-
-                    <div class="Letztes-bild">
-                        <img src="./Aufderwebseite/Zeichnung.png" alt="Zeichnung von einem Weinglas und Flasche">
-                    </div>
-
-                    <div class="footer-fa-icon"> <!-- Icons, Soziale Medien-->
-                        <link rel="stylesheet"
-                            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                        <a href="https://www.instagram.com/freitaglab/" class="fa fa-instagram"></a>
-                        <a href="https://www.facebook.com/FREITAG/" class="fa fa-facebook"> </a>
-                        <a href="https://www.youtube.com/channel/UCHyhAHfoZOUw0zRCn1JSAMg" class="fa fa-youtube"></a>
-                        <a href="https://www.pinterest.ch/freitaglab/" class="fa fa-pinterest"></a>
                     </div>
 
                 </div>
+            </div>
+        </section>
+
+        <!-- 9. Impressum -->
+        <section>
+
+            <div class="impressum-container">
+
+                <h2>WEINTAG</h2>
 
 
-            </section>
+                <div class="impressum-h3">
+                    <h3>Kontaktiere uns, bei weiteren Fragen</h3>
+                </div>
+
+                <div>
+                    <aside>WEINTAG lab. ag</aside>
+                    <aside>Weingassenallee 8</aside>
+                    <aside>70569 Stuttgart</aside>
+                    <aside>Deutschland</aside>
+                </div>
+
+                <div class="impressum-text">
+                    <aside>info@weintag-genuss.de</aside>
+                    <aside>+49 123 4567890</aside>
+                </div>
+
+                <button class="Letzter-button" type="button">Erfahre mehr über uns</button>
+
+                <div class="Letztes-bild">
+                    <img src="./Aufderwebseite/Zeichnung.png" alt="Zeichnung von einem Weinglas und Flasche">
+                </div>
+
+                <div class="footer-fa-icon"> <!-- Icons, Soziale Medien-->
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <a href="https://www.instagram.com/freitaglab/" class="fa fa-instagram"></a>
+                    <a href="https://www.facebook.com/FREITAG/" class="fa fa-facebook"> </a>
+                    <a href="https://www.youtube.com/channel/UCHyhAHfoZOUw0zRCn1JSAMg" class="fa fa-youtube"></a>
+                    <a href="https://www.pinterest.ch/freitaglab/" class="fa fa-pinterest"></a>
+                </div>
+
+            </div>
+
+
+        </section>
 
     </main>
 
