@@ -90,8 +90,8 @@ aside {
 
 .square {
   position: relative;
-  width: 32vw;
-  height: 29vw;
+  width: 28vw;
+  height: 25vw;
 }
 
 /* Square Styling für verschiedene Kategorien */
@@ -111,11 +111,11 @@ aside {
 }
 
 .square img {
-  width: 60%;
+  width: 40%;
   height: auto;
   position: absolute;
-  transform: translateX(60%);
-  top: 37%;
+  transform: translateX(145%);
+  top: 27%;
 }
 
 .square p {
@@ -183,18 +183,13 @@ aside {
 .Produktvorstellung-container {
   display: flex;
   align-items: center;
-  background-image: url(./Aufderwebseite/Flaschenkreis2.png);
-  background-size: cover;
-  /* Falls das Hintergrundbild den gesamten Container abdecken soll */
-  background-position: right;
-  /* Das Hintergrundbild rechts positionieren */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.212)), url(./Aufderwebseite/Flaschenkreis2.png);
+  background-size: cover; /* Falls das Hintergrundbild den gesamten Container abdecken soll */
+  background-position: right; /* Das Hintergrundbild rechts positionieren */
   padding-left: 70px;
   margin-bottom: 130px;
   margin-top: 100px;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
+  
 }
 
 .Produktvorstellung-Text {
@@ -231,6 +226,10 @@ aside {
 
 /* 6. Produkt im einzelnen  */
 .weinvorstellungs-container {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -822,8 +821,8 @@ area {
   }
 
   .square {
-    width: 80vw;
-    height: 72vw;
+    width: 50vw;
+    height: 53vw;
   }
 
   .square img {
@@ -841,6 +840,11 @@ area {
     align-items: center;
     height: auto;
     padding: 1em 0;
+  }
+  .zusätzlicherbuttongroup{
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
   }
 
   .buttongroup {
@@ -869,7 +873,7 @@ area {
   .Produktvorstellung-container {
     flex-direction: column;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 0px;
     height: auto;
     background-image: url(./Aufderwebseite/Handy_Flaschen.png);
     background-size: 150%;
@@ -936,9 +940,9 @@ area {
   }
 
   #Literangabe {
-    padding-right: 0;
+    padding-right: 40px;
     padding-top: 28px;
-    padding-left:30px;
+  
     font-size: 14px;
   }
   .weinpreis{
@@ -964,7 +968,9 @@ area {
     margin-bottom: 65px;
     margin-top: 50px;
   }
-
+  .Herstellungsprozess-container h2 {
+   font-size: 28px;
+  }
   .slideshow-container {
     flex-direction: row;
     overflow: hidden;
@@ -1019,9 +1025,13 @@ area {
     width: 100%;
     margin-right: 0;
   }
+  .Bewertungs-text hr {
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+  }
 
   .Bewertungs-text div {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .bewertungsicon-container {
