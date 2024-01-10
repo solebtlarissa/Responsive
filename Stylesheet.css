@@ -183,7 +183,7 @@ aside {
 .Produktvorstellung-container {
   display: flex;
   align-items: center;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.212)), url(./Aufderwebseite/Flaschenkreis2.png);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.108)), url(./Aufderwebseite/Flaschenkreis2.png);
   background-size: cover; /* Falls das Hintergrundbild den gesamten Container abdecken soll */
   background-position: right; /* Das Hintergrundbild rechts positionieren */
   padding-left: 70px;
@@ -195,7 +195,7 @@ aside {
 .Produktvorstellung-Text {
   flex: 1;
   text-align: left;
-  max-width: 55%;
+  max-width: 50%;
   /* Breite des Textcontainers begrenzen */
 }
 
@@ -703,14 +703,14 @@ area {
 }
 
 .Letztes-bild {
-  padding-left: 1000px;
+  padding-left: 900px;
   margin-top: -500px;
   width: 40px;
   height: 50%;
 }
 
 .footer-fa-icon {
-  margin-left: 1162px;
+  margin-left: 1062px;
   margin-top: -60px;
 }
 
@@ -821,12 +821,12 @@ area {
   }
 
   .square {
-    width: 50vw;
-    height: 53vw;
+    width: 48vw;
+    height: 45vw;
   }
 
   .square img {
-    transform: translateX(50%);
+    transform: translateX(120%);
     top: 30%;
   }
 
@@ -841,6 +841,7 @@ area {
     height: auto;
     padding: 1em 0;
   }
+  
   .zusätzlicherbuttongroup{
     display: flex;
     justify-content: center;
@@ -875,7 +876,7 @@ area {
     align-items: center;
     padding-left: 0px;
     height: auto;
-    background-image: url(./Aufderwebseite/Handy_Flaschen.png);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.218), rgba(255, 255, 255, 0.256)), url(./Aufderwebseite/Handy_Flaschen.png);
     background-size: 150%;
     /* Erhöht die Größe des Hintergrundbildes */
     background-clip: padding-box;
@@ -1065,28 +1066,24 @@ area {
   }
 
   .Letzter-button {
-    width: calc(100% - 10px);
-    /* Make the button slightly smaller with equal padding */
+    width: calc(100% - 10px); /* Make the button slightly smaller with equal padding */
     box-sizing: border-box;
-    /* Include padding and border in the element's total width */
-    margin: 0px 0px 20px;
-    /* Add top and bottom margin, and equal left and right margin */
-
+    margin: 0px 0px 20px; /* Add top and bottom margin, and equal left and right margin */
   }
 
   .Letztes-bild {
-    padding-left: 50px;
-    margin-top: -250px;
+    padding-left: 150px;
+    margin-top: -350px;
   }
 
   .Letztes-bild img {
-    width: 400px;
+    width: 320px;
   }
 
   .footer-fa-icon {
     margin-left: 10px;
     /* Reduzierte linke Seitenränder */
-    margin-top: 0;
+    padding-top: 90px;
     /* Reduzierte obere Seitenränder */
   }
 
