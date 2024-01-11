@@ -70,11 +70,26 @@ aside {
 .hero {
   top: 0;
   left: 0;
-  background-color: #5e2028;
+  margin-bottom: 100px; /* Abstand zur nächsten Seite */
   height: 100vh;
   width: 100vw;
+  background: url('./Aufderwebseite/Collage_Desktop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+
+.hero-text {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #691e28;
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
 /* 2.Wine Bottles-Sektion*/
 .winebottles {
@@ -223,6 +238,15 @@ aside {
   border: 2px solid #5E2028;
 }
 
+.Hintergrunddbild2 {
+  background-image: url('./Aufderwebseite/Anstoßen.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 110%;
+  height: 120vh;
+
+}
 
 /* 6. Produkt im einzelnen  */
 .weinvorstellungs-container {
@@ -705,8 +729,11 @@ area {
 .Letztes-bild {
   padding-left: 900px;
   margin-top: -500px;
-  width: 40px;
-  height: 50%;
+  
+}
+.Letztes-bild img{
+  width: 90%;
+  height: auto;
 }
 
 .footer-fa-icon {
@@ -808,7 +835,21 @@ area {
     content: url('./Logo+Icon/W-Logo.png');
     width: 60px;
     max-width: 1000px;
+  }
 
+  .hero-text {
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap; /* Hält den Text in einer einzigen Zeile */
+  
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.132), rgba(255, 255, 255, 0.142)), url('./Aufderwebseite/Collage_Handy.png');
+    margin-bottom: 40px;
   }
 
   .winebottles {
@@ -876,17 +917,17 @@ area {
     align-items: center;
     padding-left: 0px;
     height: auto;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.218), rgba(255, 255, 255, 0.256)), url(./Aufderwebseite/Handy_Flaschen.png);
-    background-size: 150%;
-    /* Erhöht die Größe des Hintergrundbildes */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.516), rgba(255, 255, 255, 0.577)), url(./Aufderwebseite/Handy_Flaschen.png);
+    background-size: 130%;
     background-clip: padding-box;
   }
 
   .Produktvorstellung-Text {
     max-width: 80%;
+    left: 20%;
     text-align: left;
   }
-
+  
   #CallToAction-Button {
     width: 100%;
     /* Button breiter machen */
