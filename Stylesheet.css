@@ -238,6 +238,7 @@ aside {
   border: 2px solid #5E2028;
 }
 
+/*4.Bild*/
 .Hintergrunddbild2 {
   background-image: url('./Aufderwebseite/Anstoßen.png');
   background-size: cover;
@@ -298,7 +299,7 @@ aside {
 
 #vertikale-linie {
   top: 0;
-  height: 500px;
+  height: 550px;
   border-right: 2px solid black;
   /* Ändere die Eigenschaften der Linie nach Bedarf */
   padding-right: 100px;
@@ -339,36 +340,43 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 35px;
 }
 
-.weinicons-bereich img {
+
+.Location-icon img{
+  width: 75px;
+  height: 98px;
+}
+.Location-icon p{
+  margin-left: 0px;
+}
+
+.Traube-icon img{
+  width: 80px;
+  height: 98px;
+}
+
+.Traube-icon p{
+ text-align: center;
+}
+.Weinkiste-icon img{
+  width: 100px;
+  height: 108px;
+}
+
+.Weinkiste-icon p{
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.Temperatur-icon img{
   width: 60px;
-  height: 80px;
+  height: 100px;
 }
-
-#Location-icon{
-  width: 12px;
-  height: 29px;
+.Temperatur-icon p{
+text-align: center;
 }
-
-#Traube-icon{
-  width: 106px;
-  height: 125px;
-}
-#Weinkiste-icon{
-  width: 128px;
-  height: 128px;
-}
-#Temperatur-icon{
-  width: 86px;
-  height: 140px;
-}
-
-#icontext{
-  font-size: 18px;
-  color: #191919f7;
-}
-
 .andereKlasse2 {
   display: none;
 }
@@ -737,7 +745,7 @@ area {
 }
 
 .footer-fa-icon {
-  margin-left: 1062px;
+  margin-left: 1075px;
   margin-top: -60px;
 }
 
@@ -772,22 +780,22 @@ area {
 }
 
 /* Footer */
+
 .footer-bottom {
   height: 22.8vh;
   background-color: #5E2028;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* This will distribute space evenly between the items */
   align-items: center;
-  padding: 0 20px;
   width: 100%;
-  /* Fügt 100% Breite hinzu, um sicherzustellen, dass der Inhalt die gesamte Breite einnimmt */
+  padding-left: 20px;
 }
 
 .footer-navigation {
@@ -795,7 +803,8 @@ area {
   padding: 0;
   margin: 0;
   display: flex;
-  /* Zeigt die Liste als Flex-Container an */
+  padding-left: 20px;
+  font-size: 15px;
 }
 
 .footer-navigation-item {
@@ -803,28 +812,24 @@ area {
   margin-right: 10px;
   font-weight: 700;
   padding: 24px 0;
-  /* Ändert die Padding-Einstellungen, um die gewünschte Ausrichtung zu erreichen */
 }
 
 #footer-ende {
   font-weight: 700;
   color: #FFFFFF;
+  margin-right: 20px;
+  font-size: 15px;
 }
 
-#letzer-Satz {
-  font-size: medium;
-  text-align: right;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-top: 10px;
+.letzter-Satz p, #disclaimer {
+  padding-left: 40px;
+font-size: 10px;
+font-weight: 700;
 }
-
-/* --------------------------*/
-
 
 
 /* Responsive-Styles für kleine Bildschirme */
-@media screen and (max-width: 650px) {
+@media  screen and  (max-width: 650px){
   header {
     width: 25%;
     /* Der Header erstreckt sich über die volle Breite des Bildschirms */
@@ -838,7 +843,7 @@ area {
   }
 
   .hero-text {
-    font-size: 60px;
+    font-size: 50px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -849,21 +854,21 @@ area {
 
   .hero {
     background-image: linear-gradient(rgba(255, 255, 255, 0.132), rgba(255, 255, 255, 0.142)), url('./Aufderwebseite/Collage_Handy.png');
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 
   .winebottles {
+    margin-top: -250px;
     flex-direction: column;
     align-items: center;
   }
 
-  .winebottles>div {
-    margin: 1em 0;
-  }
+
 
   .square {
-    width: 48vw;
-    height: 45vw;
+   
+    width: 78vw;
+    height: 85vw;
   }
 
   .square img {
@@ -872,8 +877,12 @@ area {
   }
 
   .square p {
-    font-size: 20px;
+    font-size: 40px;
     width: 70%;
+  }
+
+  #dry .square,  #sweet .square {
+    display: none;
   }
 
   #carousel {
@@ -897,9 +906,9 @@ area {
   }
 
   .carouselbtn {
-    width: 40px;
+    width: 70px;
     /* Reduzierte Breite */
-    height: 6px;
+    height: 12px;
     /* Reduzierte Höhe */
     background-color: #a8a8a8;
     margin: 0 5px;
@@ -933,16 +942,20 @@ area {
     /* Button breiter machen */
   }
 
+  .Hintergrunddbild2 {
+    width: 100%; /* Anpassen der Breite für kleinere Bildschirme */
+    height: 100vh; /* Anpassen der Höhe für kleinere Bildschirme */
+  }
+  
   .weinvorstellungs-container {
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
     padding-left: 15px;
   }
-
   .abstandrechts {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 25px;
+    padding-left: 0px;
     margin-bottom: 50px;
   }
 
@@ -959,7 +972,7 @@ area {
   }
  
   .weinsquare p {
-    font-size: 25px;
+    font-size: 40px;
    margin-bottom: 0%;
   }
 
@@ -1010,9 +1023,7 @@ area {
     margin-bottom: 65px;
     margin-top: 50px;
   }
-  .Herstellungsprozess-container h2 {
-   font-size: 28px;
-  }
+ 
   .slideshow-container {
     flex-direction: row;
     overflow: hidden;
@@ -1088,53 +1099,273 @@ area {
   }
 
   .impressum-container {
-    padding-left: 15px;
-    margin-top: 25px;
-    margin-bottom: 40px;
-    background-clip: padding-box;
+    padding-left: 50px;
+    margin-bottom: 60px;
   }
 
   .impressum-h3 {
-    margin-bottom: 12px;
-    margin-top: 10px;
-    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 15px;
   }
 
   .impressum-text {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
 
   .Letzter-button {
-    width: calc(100% - 10px); /* Make the button slightly smaller with equal padding */
+    width: calc(100% - 10px);
+    margin: 0px 0px 20px;
     box-sizing: border-box;
-    margin: 0px 0px 20px; /* Add top and bottom margin, and equal left and right margin */
+    width: 100%;
   }
 
   .Letztes-bild {
-    padding-left: 150px;
-    margin-top: -350px;
+    display: flex;
+    padding-left: 600px;
+    margin-top: -300px;
   }
 
   .Letztes-bild img {
-    width: 320px;
+    width: 100%;
+    height: auto;
   }
 
   .footer-fa-icon {
-    margin-left: 10px;
-    /* Reduzierte linke Seitenränder */
-    padding-top: 90px;
-    /* Reduzierte obere Seitenränder */
+    margin-left: 0px;
+    margin-top: 100px;
   }
 
-  .fa {
-    font-size: 30px;
-    /* Reduzierte Schriftgröße */
+  .fa.fa-youtube,
+  .fa.fa-instagram,
+  .fa.fa-facebook,
+  .fa.fa-pinterest {
+    font-size: 35px;
   }
+
 
 }
 
-@media screen and (max-width: 1080px) {
+@media only screen and  (min-width: 651px) and (max-width: 1180px) {
+ 
+  .hero-text {
+    font-size: 80px; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+  }
 
+  .hero {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./Aufderwebseite/Collage_Tablet.png');
+    margin-bottom: 40px;
+  }
+ 
+  .Produktvorstellung-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+    height: auto;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.516), rgba(255, 255, 255, 0.577)), url(./Aufderwebseite/Handy_Flaschen.png);
+    background-size: cover; /* Ändern Sie die Hintergrundgröße auf 'cover', um sicherzustellen, dass der Hintergrund vollständig sichtbar ist */
+    background-clip: padding-box;
+  }
+  
+  .Produktvorstellung-Text {
+    flex: 1;
+    text-align: left;
+    max-width: 85%; /* Begrenzt die Breite des Textes auf 85% des Containers */
+ 
+  }
+  .Hintergrunddbild2 {
+    width: 100%; /* Behält die volle Breite bei */
+    height: 75vh; /* Reduziert die Höhe auf 75% des Viewports */
+  }
+
+  .weinvorstellungs-container {
+    padding-left: 50px;
+    margin-bottom: 100px;
+    align-items: center;
+  }
+
+  .weinsquare {
+    align-items: center;
+    width: 80vw;
+    height: 78vw;
+  }
+
+  .weinsquare img {
+    width: 40%;
+    top: 20%;
+  }
+
+  .weinsquare p {
+    font-size: 40px;
+  }
+
+  #vertikale-linie{
+    display: none;
+  }
+
+  .wein-description {
+    padding-left: 50px;
+  }
+
+  .überschriften {
+    margin-left: -505px;
+  }
+  
+  .weinpreis{
+    margin-left: 0px;
+  }
+  
+  #Literangabe {
+    padding-top: 28px;
+    padding-right: 450px;
+    font-size: 14px;
+  }
+ 
+
+  .weinicons-bereich {
+    margin-top: 30px;
+  }
+
+  .Location-icon img,
+  .Traube-icon img,
+  .Weinkiste-icon img,
+  .Temperatur-icon img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .Weinkiste-icon p {
+    margin-top: 8px;
+    margin-left: 4px;
+  }
+
+  
+  
+  .Herstellungsprozess-container {
+    padding: 0 50px;
+    margin-top: 70px;
+  }
+
+  .mySlides {
+    width: 400px; /* Setzen Sie die Breite direkt */
+    margin-right: 20px
+  }
+
+  .mySlides img {
+    width: 100%; /* Bilder breiter machen */
+    height: auto; /* Höhe automatisch anpassen */
+  }
+
+  #bild9 {
+    height: 100%; /* Höhe des Bildes erhöhen */
+  }
+
+  .prev,
+  .next {
+  display: none;
+  }
+  .andereKlasse {
+    display: block;
+  }
+  .andereKlasse .buttongroup {
+    display: flex;
+    justify-content: center;
+    gap: 1em; /* Erhöhter Abstand */
+  }
+  
+  .Bewertungs-container {
+    padding-left: 50px; /* Reduzieren Sie den linken Abstand */
+    margin-top: 40px; /* Reduzieren Sie den oberen Abstand */
+    margin-bottom: 100px; /* Reduzieren Sie den unteren Abstand */
+  }
+ 
+
+  .Bewertung-drumherum img {
+    display: none; /* Bild nicht anzeigen */
+  }
+
+  .Bewertungs-text {
+    width: 100%; /* Erhöhen Sie die Breite des Textes */
+   
+  }
+
+  .Bewertungs-text>div {
+    margin-bottom: 8px; /* Reduzieren Sie den unteren Rand */
+  }
+
+  .Bewertungs-button {
+    font-size: 16px; /* Reduzieren Sie die Schriftgröße des Buttons */
+    padding: 12px 30px; /* Reduzieren Sie das Padding des Buttons */
+  }
+
+  .impressum-container {
+    padding-left: 50px;
+    margin-bottom: 80px;
+  }
+
+  .impressum-h3 {
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  .impressum-text {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .Letzter-button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  .Letztes-bild {
+    padding-left: 260px;
+    margin-top: -300px;
+  }
+
+  .Letztes-bild img {
+    width: 110%;
+  }
+
+  .footer-fa-icon {
+    margin-left: 0px;
+    margin-top: -40px;
+  }
+
+  .fa.fa-youtube, .fa.fa-facebook , .fa.fa-pinterest {
+     margin-left: 5px;
+     font-size: 40px;
+    }
+
+  .fa.fa-instagram{
+    font-size: 40px;
+  }
+    
+  .footer-bottom {
+    height: 12vh;
+    }
+  
+  .footer-content {
+      padding-left: 15px; /* Reduziert den linken Padding */
+    }
+  
+  .footer-navigation {
+      padding-left: 15px; /* Reduziert den linken Padding */
+    }
+
+  #footer-ende{
+    font-size: 15px;
+    padding-right: 20px;
+  }
+  
+  .letzter-Satz p,#disclaimer{
+    padding-left: 30px;
+      font-size: 13px; /* Verkleinert die Schriftgröße */
+    }  
+
+  
+  
 }
