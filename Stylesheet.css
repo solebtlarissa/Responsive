@@ -864,7 +864,6 @@ font-weight: 700;
   }
 
 
-
   .square {
    
     width: 78vw;
@@ -950,18 +949,18 @@ font-weight: 700;
   .weinvorstellungs-container {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 0;
-    padding-left: 15px;
+    margin-bottom: 0px;
+    padding-left: 30px;
   }
   .abstandrechts {
-    padding-right: 25px;
-    padding-left: 0px;
+    padding-right: 15px;
+    padding-left: -10px;
     margin-bottom: 50px;
   }
 
   .weinsquare {
-    width: 85vw;
-    height: 82vw;
+    width: 80vw;
+    height: 78vw;
   }
 
   .weinsquare img {
@@ -987,30 +986,44 @@ font-weight: 700;
     padding-left: 15px;
   }
 
-  .überschriften{
-    max-width: 100%;
+  .überschriften {
+    padding-left: 30px;
+    top: 0px;
     text-align: left;
-    padding-left: 0px;
-    margin-top: -600px;
-  }
-
-  #Literangabe {
-    padding-right: 40px;
-    padding-top: 28px;
+    margin-top: -1000px;
+    position: relative;
+  } 
   
+  #Literangabe {
+    padding-right: 200px;
     font-size: 14px;
   }
-  .weinpreis{
+  
+  .weinpreis {
+    padding-left: 50px;
+    top: 0px;
+    text-align: left;
     margin-top: -40px;
+    margin-left: -50px;
+    position: relative; /* Stellen Sie sicher, dass z-index angewendet wird */
+    z-index: 1; /* Setzt diese Klasse über .weinsquare */
   }
 
-  
   .wein-text {
-    margin-top: 500px;
+    position: relative; /* Positioniert den Text relativ zu seiner normalen Position */
+    margin-top: 400px;
+  
+  }
+  
+  .wein-text p{
+    line-height: 1.5;
   }
 
   .weinicons-bereich {
     width: 100%;
+  }
+  .Traube-icon p,  .Location-icon p,  .Weinkiste-icon p,   .Temperatur-icon p{
+    font-size: 18px;
   }
 
   .wein-button {
@@ -1019,9 +1032,9 @@ font-weight: 700;
   }
 
   .Herstellungsprozess-container {
+    margin-top: -60px;
     padding: 0 25px;
     margin-bottom: 65px;
-    margin-top: 50px;
   }
  
   .slideshow-container {
@@ -1059,10 +1072,10 @@ font-weight: 700;
   }
 
   .Bewertungs-container {
-    padding-left: 15px;
-    margin-top: 15px;
+    padding-left: 30px; /* Erhöht den linken Abstand */
+    margin-top: 0px;
     margin-bottom: 40px;
-  }
+}
 
   .Bewertung-drumherum {
     flex-direction: column;
@@ -1079,7 +1092,7 @@ font-weight: 700;
     margin-right: 0;
   }
   .Bewertungs-text hr {
-    width: calc(100% - 10px);
+    width: calc(100% - 12px);
     box-sizing: border-box;
   }
 
@@ -1099,7 +1112,8 @@ font-weight: 700;
   }
 
   .impressum-container {
-    padding-left: 50px;
+    margin-top: 100px;
+    padding-left: 30px;
     margin-bottom: 60px;
   }
 
@@ -1115,14 +1129,14 @@ font-weight: 700;
 
   .Letzter-button {
     width: calc(100% - 10px);
-    margin: 0px 0px 20px;
+    margin-top:10px;
     box-sizing: border-box;
-    width: 100%;
+  
   }
 
   .Letztes-bild {
     display: flex;
-    padding-left: 600px;
+    padding-left: 360px;
     margin-top: -300px;
   }
 
@@ -1140,7 +1154,12 @@ font-weight: 700;
   .fa.fa-instagram,
   .fa.fa-facebook,
   .fa.fa-pinterest {
-    font-size: 35px;
+    font-size: 40px;
+  }
+
+  .footer-bottom {
+    margin-top: 60px;
+    height: 15.8vh;
   }
 
 
