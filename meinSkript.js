@@ -1,39 +1,26 @@
+let currentIndex = 0;
+const itemsPerPage = 3;
+const totalImages = document.querySelectorAll(".carousel-div").length;
+const container = document.querySelectorAll("#carousel-container");
+const  divWidth = document.getElementsByClassName("carousel-div")[0].clientWidth;
 
-let slideIndex = 0;
-showSlides();
 
-// Next/previous controls
-function plusSlides(n) {
-  slideIndex += n;
-  showSlides();
+function updateCarousel() {
+  const carousel = document.getElementById("image-carousel");
+  const offset = -currentIndex * (divWidth +200);
+
+  carousel.style.transform = `translateX(${offset}px)`;
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  slideIndex = n;
-  showSlides();
+function prevSlide() {
+  currentIndex = (currentIndex - itemsPerPage + totalImages) % totalImages ;
+  updateCarousel();
 }
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = slideIndex; i < slideIndex + 3; i++) {
-    if (slides[i]) {
-      slides[i].style.display = "block";
-    } else {
-      // Wenn weniger als drei Bilder angezeigt werden, beginnen wir wieder von vorne
-      slides[i % slides.length].style.display = "block";
-    }
-  }
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
-  if (slideIndex < 0) {
-    slideIndex = slides.length - 3;
-  }
+function nextSlide() {
+  currentIndex = (currentIndex + itemsPerPage) % totalImages;
+
+  updateCarousel();
 }
 
 /*
@@ -85,40 +72,43 @@ let scroll = cwidth-swidth;
 let step = scroll;
 
 buttonRight.onclick = function () {
-  sideScroll(carousel,'right',25,scroll,15);
+  carousel.scrollLeft += 300;
+
+  // sideScroll(carousel,'right',25,scroll,10);
   span2.style.background = 'black';
   span1.style.background = '#A8A8A8';
-
 };
 buttonLeft.onclick = function () {
-  sideScroll(carousel,'left',25,scroll,15);
+  carousel.scrollLeft -= 300;
+
+  // sideScroll(carousel,'left',25,scroll,15);
   span2.style.background = '#A8A8A8';
   span1.style.background = 'black';
 
 };
 
-function sideScroll(element,direction,speed,distance,step){
-  scrollAmount = 0;
-  var slideTimer = setInterval(function(){
-      if(direction == 'left'){
-          element.scrollLeft -= step;
-      } else {
-          element.scrollLeft += step;
-      }
-      scrollAmount += step;
-      if(scrollAmount >= distance){
-          window.clearInterval(slideTimer);
-      }
-  }, speed);
-}
+// function sideScroll(element,direction,speed,distance,step){
+//   scrollAmount = 0;
+//   var slideTimer = setInterval(function(){
+//       if(direction == 'left'){
+//           element.scrollLeft -= step;
+//       } else {
+//           element.scrollLeft += step;
+//       }
+//       scrollAmount += step;
+//       if(scrollAmount >= distance){
+//           window.clearInterval(slideTimer);
+//       }
+//   }, speed);
+// }
 
 // var areas = document.querySelectorAll("area");
 var circles = document.querySelectorAll(".circle");
 
-  var cork = document.getElementById("cCircle");
-  var bottle = document.getElementById("bCircle");
-  var label = document.getElementById("lCircle");
-  var wine = document.getElementById("wCircle");
+  var cork = document.getElementById("cCircleOverlay");
+  var bottle = document.getElementById("bCircleOverlay");
+  var label = document.getElementById("lCircleOverlay");
+  var wine = document.getElementById("wCircleOverlay");
 
   function togglCircle(circleId) {
     var targetElement = document.getElementById(circleId);

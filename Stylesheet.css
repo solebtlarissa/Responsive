@@ -134,7 +134,9 @@ aside {
 
 /* Carousel-Sektion */
 #carousel {
-  height: 90vh;
+  /* height: 90vh; */
+  min-height: 40vw;
+  /* min-height: fit-content; */
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -144,6 +146,7 @@ aside {
   margin-top: 15em;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 /* Scrollbar ausblenden */
@@ -365,10 +368,10 @@ aside {
 }
 
 /* Show three images by default */
-.mySlides {
+/* .mySlides {
   width: calc((100% - 160px) / 3);
   flex-shrink: 0;
-}
+} */
 
 .mySlides img {
   width: 100%;
@@ -377,9 +380,9 @@ aside {
   /* Behält das Seitenverhältnis des Bildes bei */
 }
 
-#bild9 {
+/* #bild9 {
   height: 90%;
-}
+} */
 
 /* Next & previous buttons */
 .prev,
@@ -418,8 +421,8 @@ aside {
 }
 
 /* Caption text */
-#text {
-  text-transform: uppercase;
+.slidetext {
+text-transform: uppercase;
   font-weight: 700;
   padding: 8px 12px;
   width: 100%;
@@ -452,108 +455,132 @@ padding: 0 70px;
   margin-top: 100px;
 }
 .productdetails {
+  position: relative;
   display: grid;
   max-width: 98vw;
-  grid-template-columns: 1fr 90px 1fr;
+  max-height: 45vw;
+  grid-template-columns: 1fr 8vw 1fr;
   grid-template-rows: repeat(4, 1fr);
+}
+.productdetails h2{
+  font-size: 60px;
 }
 
 .productdetails img {
-  width: 171px;
-  height: 432px;
+  width: 11vw;
+  height: 32vw;
 }
 
 #product {
-  /* position: absolute; */
-  width: 171px;
-  height: 432px;
-  /* left: 50%;
-  transform: translateX(-50%); */
+  position: relative;
+  height: 70vh;  
+  height: fit-content;
   grid-column: 2;
-  grid-row: span 4;
+  grid-row: 2/span4;
+  justify-self: center;
   justify-self: center;
 
 }
 
 /* Gemeinsame Styles für Text mit Linie */
 .text {
+  position: absolute;
+  text-align: left;
+  font-size: 20px;
+
+  background-color: unset !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #707070;
   font-size: 1em;
   position: relative;
   visibility: hidden;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 40% 1fr;
+  gap: 3em;
+  grid-column: 3;
+}
+
+.text p{
+  max-width: 18vw;
 }
 
 .line {
+  text-align: left;
+
   color: black;
   border-top: 2px solid #707070;
-
   text-transform: uppercase;
-  font-size: 34px;
+  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif
 }
 
 
+
+
+
 /* Kreise und Overlays für Produkt-Details */
 area {
-  outline: 1px solid #a8a8a8;
-}
-
-.visible {
-  visibility: visible !important;
+  outline:none;
 }
 
 .circle {
-  position: relative;
-  background-color: #a8a8a8;
+  pointer-events:all;
+  position: absolute;
+  border: 1px solid #707070;
+  background-color: white;
   /* Set the default background color */
   border-radius: 50%;
   /* Create a circular shape */
   z-index: 99;
-  width: 20px;
-  height: 20px;
-  visibility: hidden;
+  width: 40px;
+  height:40px;
+  /* visibility: hidden; */
   /* Initially hide the circles */
 }
 
 #cCircleOverlay {
-  bottom: 420px;
-  left: 101px;
+  bottom: 92%;
+    left: 55%;
 }
 
 #bCircleOverlay {
-  bottom: 320px;
-  left: 39px;
+  bottom: 65%;
+    left: 17%;
 }
 
 #lCircleOverlay {
-  bottom: 258px;
-  left: 104px;
+  bottom: 47%;
+  left: 60%;
 }
 
 #wCircleOverlay {
-  bottom: 113px;
-  left: 76px;
+  bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #cork {
-  padding-top: 10px;
-  margin-top: 28px;
+  grid-row: 2;
 }
-
+#cork .line{
+  margin-top: 7%;
+}
+#cork p{
+  margin-left: unset;
+  margin-top: -5%;
+}
 #bottle {
   padding-top: 10px;
   margin-top: -83px;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 1fr 40%;
+  grid-row:3;
+grid-column: 1;
 }
-
-#wine {
-  grid-template-columns: 60% 40%;
+#bottle .line{
+  text-align: right;
+  margin-top:19%;
 
 }
-
 #bottle div {
   grid-area: 1/2;
 }
@@ -561,25 +588,42 @@ area {
 #bottle p {
   grid-area: 1/1;
 }
-
 #label {
-  padding-top: 10px;
-  margin-top: 28px;
+  grid-row: 3;
+
+}
+#label .line {
+  margin-top: 31%;
+}
+#label p{
+  margin-left: unset;
+
+  align-self: center;
 }
 
 #wine {
-  padding-top: 10px;
-  margin-top: 28px;
+  grid-template-columns: 1fr 40%;
+ grid-row: 4;
+ grid-column: 1;
 }
-
+#wine .line {
+  text-align: right;
+  margin-top: 37%;
+}
 #wine div {
   grid-area: 1/2;
 }
 
 #wine p {
   grid-area: 1/1;
+  align-self: end;
 }
 
+
+.visible {
+  visibility: visible;
+  background-color: #a8a8a8;
+}
 
 /* 8.Bewertung  */
 .Bewertungs-container {
@@ -791,7 +835,48 @@ area {
   color: #FFFFFF;
   margin-top: 10px;
 }
+#carousel-container {
+  padding:0 100px;
+  overflow: hidden;
+  position: relative;
+}
 
+#image-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 100px;
+    justify-content: start;
+}
+
+.carousel-div {
+  width: calc((100% - 200px) / 3);
+  flex: 0 0 auto;
+}
+.carousel-div img{
+  height: 80vh;  
+width: 100%;
+
+
+}
+
+#prevBtn, #nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+#prevBtn{
+left: 16px;
+}
+
+#nextBtn{
+  right: 3px;
+}
 /* --------------------------*/
 
 
@@ -811,10 +896,10 @@ area {
 
   }
 
-  .winebottles {
+  /* .winebottles {
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
   .winebottles>div {
     margin: 1em 0;
@@ -826,7 +911,7 @@ area {
   }
 
   .square img {
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
     top: 30%;
   }
 
