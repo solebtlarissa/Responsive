@@ -901,9 +901,7 @@ font-weight: 700;
     align-items: center;
   }
 
-
   .square {
-   
     width: 85vw;
     height: 88vw;
   }
@@ -957,7 +955,6 @@ font-weight: 700;
     height: 100%;
     opacity: 0;
   }
-
   .Produktvorstellung-container {
     flex-direction: column;
     align-items: center;
@@ -979,15 +976,65 @@ font-weight: 700;
     /* Button breiter machen */
   }
 
+
   .Hintergrunddbild2 {
     width: 100%; /* Anpassen der Breite für kleinere Bildschirme */
     height: 100vh; /* Anpassen der Höhe für kleinere Bildschirme */
   }
-  
+  .productdetails-section {
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+
+  .productdetails {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .productdetails h2 {
+    font-size: 30px;
+  }
+
+  .productdetails img {
+    width: 90vw;
+    height: auto;
+  }
+
+  #product {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .text {
+    font-size: 16px;
+    grid-template-columns: 1fr;
+    grid-column: 1;
+  }
+
+  .text p {
+    max-width: 90vw;
+  }
+
+  .line {
+    font-size: 20px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  #cCircleOverlay, #bCircleOverlay, #lCircleOverlay, #wCircleOverlay {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #cork, #bottle, #label, #wine {
+    grid-column: 1;
+  }
   .weinvorstellungs-container {
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 0px;
+    display: flex;
     padding-left: 30px;
   }
   .abstandrechts {
@@ -999,6 +1046,7 @@ font-weight: 700;
   .weinsquare {
     width: 80vw;
     height: 78vw;
+    order: 2;
   }
 
   .weinsquare img {
@@ -1018,10 +1066,16 @@ font-weight: 700;
     /* Versteckt die vertikale Linie */
   }
 
+ 
+  
   .wein-description {
     max-width: 100%;
     text-align: left;
     padding-left: 15px;
+  }
+
+  .überschriften, .weinpreis, #Literangabe {
+    order: 1;
   }
 
   .überschriften {
@@ -1049,7 +1103,7 @@ font-weight: 700;
 
   .wein-text {
     position: relative; /* Positioniert den Text relativ zu seiner normalen Position */
-    margin-top: 400px;
+    order: 3;
   
   }
   
@@ -1156,7 +1210,7 @@ font-weight: 700;
   .impressum-container {
     margin-top: 100px;
     padding-left: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 260px;
   }
 
   .impressum-h3 {
@@ -1173,23 +1227,20 @@ font-weight: 700;
     width: calc(100% - 10px);
     margin-top:10px;
     box-sizing: border-box;
-  
+    order: 1;
   }
 
   .Letztes-bild {
-    display: flex;
-    padding-left: 360px;
-    margin-top: -300px;
+   display: none;
   }
 
   .Letztes-bild img {
-    width: 100%;
-    height: auto;
+    display: none;
   }
 
   .footer-fa-icon {
     margin-left: 0px;
-    margin-top: 100px;
+    order: 2;
   }
 
   .fa.fa-youtube,
@@ -1200,11 +1251,20 @@ font-weight: 700;
   }
 
   .footer-bottom {
-    margin-top: 60px;
-    height: 15.8vh;
-
+    height: auto;
   }
 
+  .footer-navigation {
+    flex-direction: column;
+    align-items: left;
+    flex-wrap: wrap;
+  }
+
+
+  .letzter-Satz p, #disclaimer {
+    padding-left: 40px;
+    font-size: 8px;
+  }
 
 }
 
