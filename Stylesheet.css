@@ -479,137 +479,176 @@ text-align: center;
 
 /* Producktdetails */
 .productdetails-section{
-padding: 0 70px;
-  margin-top: 100px;
-}
-.productdetails {
-  display: grid;
-  max-width: 98vw;
-  grid-template-columns: 1fr 90px 1fr;
-  grid-template-rows: repeat(4, 1fr);
-}
-
-.productdetails img {
-  width: 171px;
-  height: 432px;
-}
-
-#product {
-  /* position: absolute; */
-  width: 171px;
-  height: 432px;
-  /* left: 50%;
-  transform: translateX(-50%); */
-  grid-column: 2;
-  grid-row: span 4;
-  justify-self: center;
-
-}
-
-/* Gemeinsame Styles für Text mit Linie */
-.text {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #707070;
-  font-size: 1em;
-  position: relative;
-  visibility: hidden;
-  display: grid;
-  grid-template-columns: 40% 60%;
-}
-
-.line {
-  color: black;
-  border-top: 2px solid #707070;
-
-  text-transform: uppercase;
-  font-size: 34px;
-  font-family: Arial, Helvetica, sans-serif
-}
-
-
-/* Kreise und Overlays für Produkt-Details */
-area {
-  outline: 1px solid #a8a8a8;
-}
-
-.visible {
-  visibility: visible !important;
-}
-
-.circle {
-  position: relative;
-  background-color: #a8a8a8;
-  /* Set the default background color */
-  border-radius: 50%;
-  /* Create a circular shape */
-  z-index: 99;
-  width: 20px;
-  height: 20px;
-  visibility: hidden;
-  /* Initially hide the circles */
-}
-
-#cCircleOverlay {
-  bottom: 420px;
-  left: 101px;
-}
-
-#bCircleOverlay {
-  bottom: 320px;
-  left: 39px;
-}
-
-#lCircleOverlay {
-  bottom: 258px;
-  left: 104px;
-}
-
-#wCircleOverlay {
-  bottom: 113px;
-  left: 76px;
-}
-
-#cork {
-  padding-top: 10px;
-  margin-top: 28px;
-}
-
-#bottle {
-  padding-top: 10px;
-  margin-top: -83px;
-  grid-template-columns: 60% 40%;
-}
-
-#wine {
-  grid-template-columns: 60% 40%;
-
-}
-
-#bottle div {
-  grid-area: 1/2;
-}
-
-#bottle p {
-  grid-area: 1/1;
-}
-
-#label {
-  padding-top: 10px;
-  margin-top: 28px;
-}
-
-#wine {
-  padding-top: 10px;
-  margin-top: 28px;
-}
-
-#wine div {
-  grid-area: 1/2;
-}
-
-#wine p {
-  grid-area: 1/1;
-}
+  padding: 0 70px;
+    margin-top: 100px;
+  }
+  .productdetails {
+    position: relative;
+    display: grid;
+    max-width: 98vw;
+    max-height: 45vw;
+    grid-template-columns: 1fr 8vw 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .productdetails h2{
+    font-size: 60px;
+  }
+  
+  .productdetails img {
+    width: 11vw;
+    height: 32vw;
+  }
+  
+  #product {
+    position: relative;
+    height: 70vh;  
+    height: fit-content;
+    grid-column: 2;
+    grid-row: 2/span4;
+    justify-self: center;
+    justify-self: center;
+  
+  }
+  
+  /* Gemeinsame Styles für Text mit Linie */
+  .text {
+    position: absolute;
+    text-align: left;
+    font-size: 20px;
+  
+    background-color: unset !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+    font-size: 1em;
+    position: relative;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 3em;
+    grid-column: 3;
+  }
+  
+  .text p{
+    max-width: 18vw;
+  }
+  
+  .line {
+    text-align: left;
+  
+    color: black;
+    border-top: 2px solid #707070;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif
+  }
+  
+  
+  /* Kreise und Overlays für Produkt-Details */
+  area {
+    outline:none;
+  }
+  
+  .circle {
+    pointer-events:all;
+    position: absolute;
+    border: 1px solid #707070;
+    background-color: white;
+    /* Set the default background color */
+    border-radius: 50%;
+    /* Create a circular shape */
+    z-index: 99;
+    width: 40px;
+    height:40px;
+    /* visibility: hidden; */
+    /* Initially hide the circles */
+  }
+  
+  #cCircleOverlay {
+    bottom: 92%;
+      left: 55%;
+  }
+  
+  #bCircleOverlay {
+    bottom: 65%;
+      left: 17%;
+  }
+  
+  #lCircleOverlay {
+    bottom: 47%;
+    left: 60%;
+  }
+  
+  #wCircleOverlay {
+    bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+  #cork {
+    grid-row: 2;
+  }
+  #cork .line{
+    margin-top: 7%;
+  }
+  #cork p{
+    margin-left: unset;
+    margin-top: -5%;
+  }
+  #bottle {
+    padding-top: 10px;
+    margin-top: -83px;
+    grid-template-columns: 1fr 40%;
+    grid-row:3;
+  grid-column: 1;
+  }
+  #bottle .line{
+    text-align: right;
+    margin-top:19%;
+  
+  }
+  #bottle div {
+    grid-area: 1/2;
+  }
+  
+  #bottle p {
+    grid-area: 1/1;
+  }
+  #label {
+    grid-row: 3;
+  
+  }
+  #label .line {
+    margin-top: 31%;
+  }
+  #label p{
+    margin-left: unset;
+  
+    align-self: center;
+  }
+  
+  #wine {
+    grid-template-columns: 1fr 40%;
+   grid-row: 4;
+   grid-column: 1;
+  }
+  #wine .line {
+    text-align: right;
+    margin-top: 37%;
+  }
+  #wine div {
+    grid-area: 1/2;
+  }
+  
+  #wine p {
+    grid-area: 1/1;
+    align-self: end;
+  }
+  
+  
+  .visible {
+    visibility: visible;
+    background-color: #a8a8a8;
+  }
 
 
 /* 8.Bewertung  */

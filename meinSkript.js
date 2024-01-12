@@ -85,40 +85,43 @@ let scroll = cwidth-swidth;
 let step = scroll;
 
 buttonRight.onclick = function () {
-  sideScroll(carousel,'right',25,scroll,15);
+  carousel.scrollLeft += 300;
+
+  // sideScroll(carousel,'right',25,scroll,10);
   span2.style.background = 'black';
   span1.style.background = '#A8A8A8';
-
 };
 buttonLeft.onclick = function () {
-  sideScroll(carousel,'left',25,scroll,15);
+  carousel.scrollLeft -= 300;
+
+  // sideScroll(carousel,'left',25,scroll,15);
   span2.style.background = '#A8A8A8';
   span1.style.background = 'black';
 
 };
 
-function sideScroll(element,direction,speed,distance,step){
-  scrollAmount = 0;
-  var slideTimer = setInterval(function(){
-      if(direction == 'left'){
-          element.scrollLeft -= step;
-      } else {
-          element.scrollLeft += step;
-      }
-      scrollAmount += step;
-      if(scrollAmount >= distance){
-          window.clearInterval(slideTimer);
-      }
-  }, speed);
-}
+// function sideScroll(element,direction,speed,distance,step){
+//   scrollAmount = 0;
+//   var slideTimer = setInterval(function(){
+//       if(direction == 'left'){
+//           element.scrollLeft -= step;
+//       } else {
+//           element.scrollLeft += step;
+//       }
+//       scrollAmount += step;
+//       if(scrollAmount >= distance){
+//           window.clearInterval(slideTimer);
+//       }
+//   }, speed);
+// }
 
 // var areas = document.querySelectorAll("area");
 var circles = document.querySelectorAll(".circle");
 
-  var cork = document.getElementById("cCircle");
-  var bottle = document.getElementById("bCircle");
-  var label = document.getElementById("lCircle");
-  var wine = document.getElementById("wCircle");
+  var cork = document.getElementById("cCircleOverlay");
+  var bottle = document.getElementById("bCircleOverlay");
+  var label = document.getElementById("lCircleOverlay");
+  var wine = document.getElementById("wCircleOverlay");
 
   function togglCircle(circleId) {
     var targetElement = document.getElementById(circleId);
