@@ -1,4 +1,3 @@
-
 let slideIndex = 0;
 showSlides();
 
@@ -17,17 +16,30 @@ function currentSlide(n) {
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
+  let mq = window.matchMedia("(min-width: 650px) and (max-width: 1180px)");
+  
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = slideIndex; i < slideIndex + 3; i++) {
-    if (slides[i]) {
-      slides[i].style.display = "block";
-    } else {
-      // Wenn weniger als drei Bilder angezeigt werden, beginnen wir wieder von vorne
-      slides[i % slides.length].style.display = "block";
+  
+  if (mq.matches) { // Wenn der Viewport zwischen 650px und 1180px liegt
+    for (i = slideIndex; i < slideIndex + 2; i++) { // Zeige nur zwei Bilder an
+      if (slides[i]) {
+        slides[i].style.display = "block";
+      } else {
+        slides[i % slides.length].style.display = "block";
+      }
+    }
+  } else {
+    for (i = slideIndex; i < slideIndex + 3; i++) { // Zeige drei Bilder an
+      if (slides[i]) {
+        slides[i].style.display = "block";
+      } else {
+        slides[i % slides.length].style.display = "block";
+      }
     }
   }
+  
   if (slideIndex >= slides.length) {
     slideIndex = 0;
   }

@@ -369,22 +369,20 @@ aside {
 
 .weinicons-bereich {
   display: flex;
-  justify-content: flex-end;
-  /* Positionieren Sie die Elemente weiter rechts */
+  flex-direction: row;
+  justify-content: flex-end; /* Positionieren Sie die Elemente weiter rechts */
   margin-top: 40px;
-  margin-right: -50px;
-  /* Verschieben Sie den Icons-Bereich weiter nach rechts */
+  margin-right: -50px;/* Verschieben Sie den Icons-Bereich weiter nach rechts */
 }
 
 .weinicons-bereich div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Zentrieren Sie die Elemente vertikal */
   text-align: center;
-  /* Zentrieren Sie den Text horizontal */
   margin-bottom: 25px;
 }
+
 
 .Location-icon,
 .Weinkiste-icon,
@@ -453,7 +451,6 @@ aside {
   justify-content: space-between;
   position: relative;
   margin: auto;
-
 }
 
 /* Show three images by default */
@@ -469,9 +466,10 @@ aside {
   /* Behält das Seitenverhältnis des Bildes bei */
 }
 
-#bild9 {
-  height: 90%;
+.imageSliderGroup{
+  display: none;
 }
+
 
 .abstandzwei {
   margin-bottom: 200px;
@@ -500,7 +498,6 @@ aside {
 
 .next {
   right: -50px;
-  /* Verschiebt den Pfeil nach rechts */
 }
 
 .prev {
@@ -1152,10 +1149,14 @@ area {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row; /* Ändern Sie dies von column zu row */
+  flex-wrap: wrap;
 }
 
 .weinicons-bereich div {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Location-icon,
@@ -1168,12 +1169,7 @@ area {
   align-items: center;
 }
 
-.icon-pair {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 
-  }
 
   .Location-icon img {
     width: 50px;
@@ -1518,7 +1514,7 @@ area {
   }
 
   .weinvorstellungs-container {
-    min-height: 155vh;
+    min-height: 135vh;
     overflow: auto;
     flex-direction: column;
     align-items: center;
@@ -1641,25 +1637,15 @@ area {
     /* Höhe automatisch anpassen */
   }
 
-  #bild9 {
-    height: 100%;
-    /* Höhe des Bildes erhöhen */
-  }
-
-  .prev,
-  .next {
+  .prev {
     display: none;
   }
-
+  
+  .next {
+    right: -50px;
+  }
   .imageSlideButton button {
-    background-color: #808080; /* Graue Farbe für alle Buttons */
-    border: none; /* Entfernt den Standard-Button-Rahmen */
-    padding: 8px 35px; /* Größe des Buttons */
-    margin: 4px 2px;
-    margin-top: 30px;
-    cursor: pointer; /* Ändert den Mauszeiger beim Überfahren des Buttons */
-    transition-duration: 0.4s; /* Fügt eine Animation hinzu, wenn sich der Button-Stil ändert */
-    border-radius: 0px; /* Macht den Button rechteckig */
+    display: none;
   }
 
   .Bewertungs-container {
@@ -1717,13 +1703,7 @@ area {
   }
 
   .Letztes-bild {
-    padding-left: 260px;
-    margin-top: -300px;
-    position: relative;
-  }
-
-  .Letztes-bild img {
-    width: 100%;
+    display: none;
   }
 
   .footer-fa-icon {
