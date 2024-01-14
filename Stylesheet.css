@@ -1095,7 +1095,7 @@ area {
     display: none;
   }
   .weinvorstellungs-container {
-    min-height: 180vh;
+    min-height: 200vh;
     overflow: auto; /* Fügt Scrollbars hinzu, wenn der Inhalt die max-height überschreitet */
     flex-direction: column;
     align-items: center;
@@ -1589,9 +1589,7 @@ area {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* Zentrieren Sie die Elemente vertikal */
     text-align: center;
-    /* Zentrieren Sie den Text horizontal */
     margin-bottom: 25px;
   }
 
