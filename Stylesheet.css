@@ -62,7 +62,7 @@ aside {
   margin-left: auto;
 }
 
-.abstand{
+.abstand {
   margin-bottom: 250px;
 }
 
@@ -70,7 +70,8 @@ aside {
 .hero {
   top: 0;
   left: 0;
-  margin-bottom: 100px; /* Abstand zur nächsten Seite */
+  margin-bottom: 100px;
+  /* Abstand zur nächsten Seite */
   height: 100vh;
   width: 100vw;
   background: url('./Aufderwebseite/Collage_Desktop.png');
@@ -199,12 +200,14 @@ aside {
   display: flex;
   align-items: center;
   background-image: linear-gradient(rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.108)), url(./Aufderwebseite/Flaschenkreis2.png);
-  background-size: cover; /* Falls das Hintergrundbild den gesamten Container abdecken soll */
-  background-position: right; /* Das Hintergrundbild rechts positionieren */
+  background-size: cover;
+  /* Falls das Hintergrundbild den gesamten Container abdecken soll */
+  background-position: right;
+  /* Das Hintergrundbild rechts positionieren */
   padding-left: 70px;
   margin-bottom: 130px;
   margin-top: 100px;
-  
+
 }
 
 .Produktvorstellung-Text {
@@ -251,32 +254,68 @@ aside {
 
 /* 6. Produkt im einzelnen  */
 .weinvorstellungs-container {
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
+  max-height: 70vw;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* Ändern Sie justify-content auf flex-end, um Elemente rechts zu starten */
+  align-items: flex-start;
+  /* Ändern Sie align-items auf flex-start, um Elemente oben zu starten */
+  margin-left: 90px;
+  margin-top: 130px;
+}
+
+.überschriften {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 40px;
+  /* Behalten Sie den linken Abstand bei */
+  order: 1;
+}
+
+
+.überschriften div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding-left: 70px;
-  margin-bottom: 130px;
+
+}
+
+#weinpreis {
+  margin-top: 10px;
+}
+
+#Literangabe {
+  color: #000000c4;
+  margin-top: 22px;
+  padding-left: 20px;
+  /* Entfernen Sie den linken Abstand */
+  font-size: 16px;
+  white-space: nowrap;
+  /* Stellen Sie sicher, dass der Text in einer Zeile angezeigt wird */
 }
 
 .weinsquare {
+  margin-top: 40px;
   position: relative;
-  width: 26vw;
-  height: 23vw;
+  width: 28vw;
+  height: 25vw;
   max-width: 100vh;
+  order: 2;
+  /* Verwenden Sie die order Eigenschaft, um die Reihenfolge der Elemente zu ändern */
 }
 
 .weinsquare img {
   width: 35%;
   height: auto;
   position: absolute;
-  transform: translateX(135%);
-  top: 15%;
-
+  transform: translateX(155%);
+  top: 25%;
 }
 
 #halfdry .weinsquare {
@@ -299,93 +338,114 @@ aside {
 
 #vertikale-linie {
   top: 0;
-  height: 550px;
+  height: 520px;
   border-right: 2px solid black;
   /* Ändere die Eigenschaften der Linie nach Bedarf */
-  padding-right: 100px;
-  /* Füge einen Abstand zwischen dem Bild und der Linie hinzu */
+  padding-right: 45px;
+  /* Abstand zwischen dem Bild und der Linie hinzu */
+
 }
 
 .wein-description {
+  position: relative;
+  z-index: 1;
   text-align: left;
-  padding-left: 35px;
-  margin-right: 5%;
   max-width: 70vw;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 100px;
+  margin-bottom: 150px;
   line-height: 1.5;
+  padding: 25px;
+  left: -25.8vw;
+  order: 3;
 }
 
-.weinpreis {
-  display: flex;
-  justify-content: space-between;
-  /* oder space-around, je nachdem wie viel Platz du möchtest */
-  margin-top: -30px;
-}
-
-#Literangabe {
-  color: #000000c4;
-  padding-top: 24px;
-  padding-right: 440px;
-  font-size: 16px;
+.wein-text p {
+  font-size: 20px;
+  padding: 20px;/* Fügen Sie Polsterung hinzu, um dem Text mehr Platz zu geben */
+  max-width: 90vw;
+  width: 160%;
+  height: auto;
 }
 
 .weinicons-bereich {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  /* Positionieren Sie die Elemente weiter rechts */
   margin-top: 40px;
+  margin-right: -50px;
+  /* Verschieben Sie den Icons-Bereich weiter nach rechts */
 }
 
 .weinicons-bereich div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 35px;
+  /* Zentrieren Sie die Elemente vertikal */
+  text-align: center;
+  /* Zentrieren Sie den Text horizontal */
+  margin-bottom: 25px;
 }
 
-
-.Location-icon img{
-  width: 75px;
-  height: 98px;
+.Location-icon,
+.Weinkiste-icon,
+.Traube-icon {
+  margin-right: 40px;
 }
-.Location-icon p{
+
+.Location-icon img {
+  width: 60px;
+  height: 88px;
+}
+
+.Location-icon p {
   margin-left: 0px;
 }
 
-.Traube-icon img{
-  width: 80px;
+.Weinkiste-icon img {
+  width: 90px;
   height: 98px;
 }
 
-.Traube-icon p{
- text-align: center;
-}
-.Weinkiste-icon img{
-  width: 100px;
-  height: 108px;
-}
-
-.Weinkiste-icon p{
+.Weinkiste-icon p {
   margin-top: 10px;
   margin-left: 5px;
 }
 
-.Temperatur-icon img{
+.Traube-icon img {
+  width: 75px;
+  height: 88px;
+  align-items: center;
+}
+
+.Traube-icon p {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.Temperatur-icon img {
   width: 60px;
   height: 100px;
 }
-.Temperatur-icon p{
-text-align: center;
-}
-.andereKlasse2 {
-  display: none;
+
+.Temperatur-icon p {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
+.button-wein-description {
+  margin-left: 20px;
+}
+
+.abstand {
+  margin-bottom: 0px;
+}
 
 /* Herstellungsprozess */
 .Herstellungsprozess-container {
   padding: 0 70px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .slideshow-container {
@@ -411,6 +471,10 @@ text-align: center;
 
 #bild9 {
   height: 90%;
+}
+
+.abstandzwei {
+  margin-bottom: 200px;
 }
 
 /* Next & previous buttons */
@@ -473,182 +537,190 @@ text-align: center;
   }
 }
 
-.andereKlasse {
-  display: none;
-}
+
 
 /* Producktdetails */
-.productdetails-section{
+.productdetails-section {
   padding: 0 70px;
-    margin-top: 100px;
-  }
-  .productdetails {
-    position: relative;
-    display: grid;
-    max-width: 98vw;
-    max-height: 45vw;
-    grid-template-columns: 1fr 8vw 1fr;
-    grid-template-rows: repeat(4, 1fr);
-  }
-  .productdetails h2{
-    font-size: 60px;
-  }
-  
-  .productdetails img {
-    width: 11vw;
-    height: 32vw;
-  }
-  
-  #product {
-    position: relative;
-    height: 70vh;  
-    height: fit-content;
-    grid-column: 2;
-    grid-row: 2/span4;
-    justify-self: center;
-    justify-self: center;
-  
-  }
-  
-  /* Gemeinsame Styles für Text mit Linie */
-  .text {
-    position: absolute;
-    text-align: left;
-    font-size: 20px;
-  
-    background-color: unset !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #707070;
-    font-size: 1em;
-    position: relative;
-    visibility: hidden;
-    display: grid;
-    grid-template-columns: 40% 1fr;
-    gap: 3em;
-    grid-column: 3;
-  }
-  
-  .text p{
-    max-width: 18vw;
-  }
-  
-  .line {
-    text-align: left;
-  
-    color: black;
-    border-top: 2px solid #707070;
-    text-transform: uppercase;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif
-  }
-  
-  
-  /* Kreise und Overlays für Produkt-Details */
-  area {
-    outline:none;
-  }
-  
-  .circle {
-    pointer-events:all;
-    position: absolute;
-    border: 1px solid #707070;
-    background-color: white;
-    /* Set the default background color */
-    border-radius: 50%;
-    /* Create a circular shape */
-    z-index: 99;
-    width: 40px;
-    height:40px;
-    /* visibility: hidden; */
-    /* Initially hide the circles */
-  }
-  
-  #cCircleOverlay {
-    bottom: 92%;
-      left: 55%;
-  }
-  
-  #bCircleOverlay {
-    bottom: 65%;
-      left: 17%;
-  }
-  
-  #lCircleOverlay {
-    bottom: 47%;
-    left: 60%;
-  }
-  
-  #wCircleOverlay {
-    bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-  }
-  
-  #cork {
-    grid-row: 2;
-  }
-  #cork .line{
-    margin-top: 7%;
-  }
-  #cork p{
-    margin-left: unset;
-    margin-top: -5%;
-  }
-  #bottle {
-    padding-top: 10px;
-    margin-top: -83px;
-    grid-template-columns: 1fr 40%;
-    grid-row:3;
+  margin-top: 100px;
+  align-items: center;
+  max-width: 98vw;
+  max-height: 80vw;
+}
+
+.productdetails {
+  display: grid;
+  max-width: 98vw;
+  max-height: 45vw;
+  grid-template-columns: 1fr 8vw 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.productdetails img {
+  width: 11vw;
+  height: 32vw;
+}
+
+#product {
+  position: relative;
+  height: 70vh;
+  height: fit-content;
+  grid-column: 2;
+  grid-row: 2/span4;
+  justify-self: center;
+  justify-self: center;
+}
+
+/* Gemeinsame Styles für Text mit Linie */
+.text {
+  position: absolute;
+  text-align: left;
+  font-size: 20px;
+  background-color: unset !important;
+  color: #707070;
+  font-size: 1em;
+  position: relative;
+  visibility: hidden;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 3em;
+  grid-column: 3;
+}
+
+.text p {
+  max-width: 18vw;
+}
+
+.line {
+  text-align: left;
+
+  color: black;
+  border-top: 2px solid #707070;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+
+/* Kreise und Overlays für Produkt-Details */
+area {
+  outline: none;
+}
+
+.circle {
+  pointer-events: all;
+  position: absolute;
+  border: 1px solid #707070;
+  background-color: white;
+  /* Set the default background color */
+  border-radius: 50%;
+  /* Create a circular shape */
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  /* visibility: hidden; */
+  /* Initially hide the circles */
+}
+
+#cCircleOverlay {
+  bottom: 92%;
+  left: 55%;
+}
+
+#bCircleOverlay {
+  bottom: 65%;
+  left: 17%;
+}
+
+#lCircleOverlay {
+  bottom: 47%;
+  left: 60%;
+}
+
+#wCircleOverlay {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#cork {
+  grid-row: 2;
+}
+
+#cork .line {
+  margin-top: 7%;
+}
+
+#cork p {
+  margin-left: unset;
+  margin-top: -5%;
+}
+
+#bottle {
+  padding-top: 10px;
+  margin-top: -83px;
+  grid-template-columns: 1fr 40%;
+  grid-row: 3;
   grid-column: 1;
-  }
-  #bottle .line{
-    text-align: right;
-    margin-top:19%;
-  
-  }
-  #bottle div {
-    grid-area: 1/2;
-  }
-  
-  #bottle p {
-    grid-area: 1/1;
-  }
-  #label {
-    grid-row: 3;
-  
-  }
-  #label .line {
-    margin-top: 31%;
-  }
-  #label p{
-    margin-left: unset;
-  
-    align-self: center;
-  }
-  
-  #wine {
-    grid-template-columns: 1fr 40%;
-   grid-row: 4;
-   grid-column: 1;
-  }
-  #wine .line {
-    text-align: right;
-    margin-top: 37%;
-  }
-  #wine div {
-    grid-area: 1/2;
-  }
-  
-  #wine p {
-    grid-area: 1/1;
-    align-self: end;
-  }
-  
-  
-  .visible {
-    visibility: visible;
-    background-color: #a8a8a8;
-  }
+}
+
+#bottle .line {
+  text-align: right;
+  margin-top: 19%;
+
+}
+
+#bottle div {
+  grid-area: 1/2;
+}
+
+#bottle p {
+  grid-area: 1/1;
+}
+
+#label {
+  grid-row: 3;
+
+}
+
+#label .line {
+  margin-top: 31%;
+}
+
+#label p {
+  margin-left: unset;
+
+  align-self: center;
+}
+
+#wine {
+  grid-template-columns: 1fr 40%;
+  grid-row: 4;
+  grid-column: 1;
+}
+
+#wine .line {
+  text-align: right;
+  margin-top: 37%;
+}
+
+#wine div {
+  grid-area: 1/2;
+}
+
+#wine p {
+  grid-area: 1/1;
+  align-self: end;
+}
+
+.visible {
+  visibility: visible;
+  background-color: #a8a8a8;
+}
+
+.otherpicProduct{
+  display: none;
+}
 
 
 /* 8.Bewertung  */
@@ -775,9 +847,10 @@ text-align: center;
 .Letztes-bild {
   padding-left: 900px;
   margin-top: -500px;
-  
+
 }
-.Letztes-bild img{
+
+.Letztes-bild img {
   width: 90%;
   height: auto;
 }
@@ -830,7 +903,8 @@ text-align: center;
 
 .footer-content {
   display: flex;
-  justify-content: space-between; /* This will distribute space evenly between the items */
+  justify-content: space-between;
+  /* This will distribute space evenly between the items */
   align-items: center;
   width: 100%;
   padding-left: 20px;
@@ -852,6 +926,10 @@ text-align: center;
   padding: 24px 0;
 }
 
+.footer-navigation-item:hover {
+  color: black;
+}
+
 #footer-ende {
   font-weight: 700;
   color: #FFFFFF;
@@ -859,15 +937,16 @@ text-align: center;
   font-size: 15px;
 }
 
-.letzter-Satz p, #disclaimer {
+.letzter-Satz p,
+#disclaimer {
   padding-left: 40px;
-font-size: 10px;
-font-weight: 700;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 
 /* Responsive-Styles für kleine Bildschirme */
-@media  screen and  (max-width: 650px){
+@media screen and (max-width: 650px) {
   header {
     width: 25%;
     /* Der Header erstreckt sich über die volle Breite des Bildschirms */
@@ -886,13 +965,14 @@ font-weight: 700;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    white-space: nowrap; /* Hält den Text in einer einzigen Zeile */
-  
+    white-space: nowrap;
+    /* Hält den Text in einer einzigen Zeile */
+
   }
 
   .hero {
     background-image: linear-gradient(rgba(255, 255, 255, 0.132), rgba(255, 255, 255, 0.142)), url('./Aufderwebseite/Collage_Handy.png');
-    margin-bottom: 10px;
+    margin-bottom: -50px;
   }
 
   .winebottles {
@@ -903,11 +983,11 @@ font-weight: 700;
 
   .square {
     width: 85vw;
-    height: 88vw;
+    height: 95vw;
   }
 
   .square img {
-    transform: translateX(140%);
+    transform: translateX(150%);
     top: 30%;
   }
 
@@ -916,7 +996,8 @@ font-weight: 700;
     width: 70%;
   }
 
-  #dry .square,  #sweet .square {
+  #dry .square,
+  #sweet .square {
     display: none;
   }
 
@@ -926,8 +1007,8 @@ font-weight: 700;
     height: auto;
     padding: 1em 0;
   }
-  
-  .zusätzlicherbuttongroup{
+
+  .zusätzlicherbuttongroup {
     display: flex;
     justify-content: center;
     gap: 1.5em;
@@ -955,6 +1036,7 @@ font-weight: 700;
     height: 100%;
     opacity: 0;
   }
+
   .Produktvorstellung-container {
     flex-direction: column;
     align-items: center;
@@ -970,169 +1052,174 @@ font-weight: 700;
     left: 20%;
     text-align: left;
   }
-  
+
   #CallToAction-Button {
     width: 100%;
     /* Button breiter machen */
   }
 
-
   .Hintergrunddbild2 {
-    width: 100%; /* Anpassen der Breite für kleinere Bildschirme */
-    height: 100vh; /* Anpassen der Höhe für kleinere Bildschirme */
+    width: 100%;
+    /* Anpassen der Breite für kleinere Bildschirme */
+    height: 100vh;
+    /* Anpassen der Höhe für kleinere Bildschirme */
   }
+ 
   .productdetails-section {
-    padding: 0 20px;
-    margin-top: 50px;
-  }
+    max-height:200vw; /* Er max-height: 75vw; höht die Höhe für kleinere Bildschirme */
+   }
 
-  .productdetails {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .productdetails h2 {
-    font-size: 30px;
-  }
-
-  .productdetails img {
-    width: 90vw;
+   .otherpicProduct {
+    display: block;
+    max-width: 80%; /* Reduziert die Breite des Bildes auf 80% */
     height: auto;
+    margin-left: auto; /* Zentriert das Bild horizontal */
+    margin-right: auto; /* Zentriert das Bild horizontal */
   }
+ 
+  .productdetails-section h2 {
+    margin-left: -40px; /* Verschiebt die Überschrift weiter nach links */
+    font-size: 35px;
 
-  #product {
-    grid-column: 1;
-    grid-row: auto;
+  }
+ 
+  .productdetails img {
+   display: none;
   }
 
   .text {
-    font-size: 16px;
-    grid-template-columns: 1fr;
-    grid-column: 1;
-  }
-
-  .text p {
-    max-width: 90vw;
-  }
-
-  .line {
-    font-size: 20px;
+    display: none;
   }
 
   .circle {
-    width: 20px;
-    height: 20px;
-  }
-
-  #cCircleOverlay, #bCircleOverlay, #lCircleOverlay, #wCircleOverlay {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  #cork, #bottle, #label, #wine {
-    grid-column: 1;
+    display: none;
   }
   .weinvorstellungs-container {
+    min-height: 180vh;
+    overflow: auto; /* Fügt Scrollbars hinzu, wenn der Inhalt die max-height überschreitet */
     flex-direction: column;
-    display: flex;
-    padding-left: 30px;
-  }
-  .abstandrechts {
-    padding-right: 15px;
-    padding-left: -10px;
-    margin-bottom: 50px;
-  }
-
-  .weinsquare {
-    width: 80vw;
-    height: 78vw;
-    order: 2;
-  }
-
-  .weinsquare img {
-    width: 38%;
-    height: auto;
-    position: absolute;
-    top: 30%;
-  }
- 
-  .weinsquare p {
-    font-size: 40px;
-   margin-bottom: 0%;
-  }
-
-  #vertikale-linie {
-    display: none;
-    /* Versteckt die vertikale Linie */
-  }
-
- 
-  
-  .wein-description {
-    max-width: 100%;
-    text-align: left;
-    padding-left: 15px;
-  }
-
-  .überschriften, .weinpreis, #Literangabe {
-    order: 1;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 100px;
+    margin-top: -50px;
   }
 
   .überschriften {
-    padding-left: 30px;
-    top: 0px;
-    text-align: left;
-    margin-top: -1000px;
-    position: relative;
-  } 
-  
+    order: 1;
+    margin-top: -70px; 
+    padding-left: 20px; 
+  }
+
+  .überschriften h2{
+    margin-bottom: -1px;
+  }
+
+  #weinpreis {
+    margin-top: 15px; /* Reduziert den oberen Rand auf 5px */
+  }
+
   #Literangabe {
-    padding-right: 200px;
-    font-size: 14px;
+    margin-top: 25px; /* Reduziert den oberen Rand auf 10px */
+    font-size: 15px;
   }
   
-  .weinpreis {
-    padding-left: 50px;
-    top: 0px;
-    text-align: left;
-    margin-top: -40px;
-    margin-left: -50px;
-    position: relative; /* Stellen Sie sicher, dass z-index angewendet wird */
-    z-index: 1; /* Setzt diese Klasse über .weinsquare */
+  .abstandrechts, .weinsquare {
+    width: 90vw;
+    height: 80vw;
+    margin-top: 8px;
+    order: 2;
   }
-
-  .wein-text {
-    position: relative; /* Positioniert den Text relativ zu seiner normalen Position */
+  #vertikale-linie {
+    display: none;
+  }
+  .wein-description {
+    max-width: 90vw;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    left: 0;
     order: 3;
-  
   }
-  
-  .wein-text p{
-    line-height: 1.5;
+ 
+.wein-text {
+ margin-left: -35px;
+}
+.wein-text p{
+  text-align: justify;
+ 
+}
+.weinicons-bereich {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weinicons-bereich div {
+  margin-bottom: 15px;
+}
+
+.Location-icon,
+.Weinkiste-icon,
+.Traube-icon,
+.Temperatur-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-pair {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   }
 
-  .weinicons-bereich {
-    width: 100%;
+  .Location-icon img {
+    width: 50px;
+    height: 68px;
   }
-  .Traube-icon p,  .Location-icon p,  .Weinkiste-icon p,   .Temperatur-icon p{
-    font-size: 18px;
+ 
+  .Weinkiste-icon img {
+    width: 80px;
+    height: 78px;
+  }
+  
+  .Traube-icon img {
+    width: 65px;
+    height: 78px;
+    align-items: center;
+  }
+  
+  .Temperatur-icon img {
+    width: 55px;
+    height: 90px;
   }
 
-  .wein-button {
-    width: 100%;
-    box-sizing: border-box;
+  .Location-icon p,
+  .Weinkiste-icon p,
+  .Traube-icon p,
+  .Temperatur-icon p {
+    text-align: center; /* Zentriert den Text */
+    font-size: 14px; /* Verkleinert die Schriftgröße auf 14px */
   }
+
 
   .Herstellungsprozess-container {
-    margin-top: -60px;
+    margin-top: -45px;
     padding: 0 25px;
     margin-bottom: 65px;
   }
+
   .Herstellungsprozess-container h2 {
     font-size: 25px;
     display: flex;
   }
- 
+
+  .abstandzwei {
+    margin-bottom: 150px;
+  }
+
   .slideshow-container {
     flex-direction: row;
     overflow: hidden;
@@ -1156,22 +1243,35 @@ font-weight: 700;
     display: none;
   }
 
-  .andereKlasse {
-    display: block;
+  .imageSlideButton button {
+    background-color: #808080; /* Graue Farbe für alle Buttons */
+    border: none; /* Entfernt den Standard-Button-Rahmen */
+    padding: 4px 24px; /* Verkleinert die Größe des Buttons */
+    margin: 2px 1px;
+    margin-top: 15px; /* Reduziert den oberen Rand */
+    cursor: pointer; /* Ändert den Mauszeiger beim Überfahren des Buttons */
+    transition-duration: 0.4s; /* Fügt eine Animation hinzu, wenn sich der Button-Stil ändert */
+    border-radius: 0px; /* Macht den Button rechteckig */
   }
 
-  .andereKlasse .buttongroup {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    /* Reduzierter Abstand */
+  .imageSliderGroup {
+    overflow: auto; /* Fügt einen horizontalen Scrollbalken hinzu, wenn der Inhalt überläuft */
+    white-space: nowrap; /* Verhindert, dass die Elemente in eine neue Zeile umgebrochen werden */
+    scrollbar-width: none; /* Für Firefox */
   }
 
+  .imageSliderGroup::-webkit-scrollbar {
+    display: none; /* Für Chrome, Safari und andere WebKit-Browser */
+  }
+
+  #imageButton1 {
+    background-color: #000000; /* Schwarze Farbe für den ersten Button */
+  }
   .Bewertungs-container {
-    padding-left: 30px; /* Erhöht den linken Abstand */
+    padding-left: 30px;   /* Erhöht den linken Abstand */
     margin-top: 0px;
     margin-bottom: 40px;
-}
+  }
 
   .Bewertung-drumherum {
     flex-direction: column;
@@ -1187,6 +1287,7 @@ font-weight: 700;
     width: 100%;
     margin-right: 0;
   }
+
   .Bewertungs-text hr {
     width: calc(100% - 12px);
     box-sizing: border-box;
@@ -1197,20 +1298,26 @@ font-weight: 700;
   }
 
   .bewertungsicon-container {
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .bewertungsicon-container img {
+    width: 6vh;
+    height: 11vh;
+    margin-right: 12px;
   }
 
   .Bewertungs-button {
     width: calc(100% - 10px);
-    margin: 0px 0px 20px;
+    margin: 30px 0px 20px;
     box-sizing: border-box;
   }
 
   .impressum-container {
     margin-top: 100px;
     padding-left: 30px;
-    margin-bottom: 260px;
+    margin-bottom: 100px;
   }
 
   .impressum-h3 {
@@ -1225,21 +1332,18 @@ font-weight: 700;
 
   .Letzter-button {
     width: calc(100% - 10px);
-    margin-top:10px;
+    margin-top: 10px;
     box-sizing: border-box;
     order: 1;
   }
 
   .Letztes-bild {
-   display: none;
-  }
-
-  .Letztes-bild img {
     display: none;
   }
 
   .footer-fa-icon {
     margin-left: 0px;
+    margin-top: 40px;
     order: 2;
   }
 
@@ -1261,17 +1365,18 @@ font-weight: 700;
   }
 
 
-  .letzter-Satz p, #disclaimer {
+  .letzter-Satz p,
+  #disclaimer {
     padding-left: 40px;
     font-size: 8px;
   }
 
 }
 
-@media only screen and  (min-width: 651px) and (max-width: 1180px) {
- 
+@media only screen and (min-width: 650px) and (max-width: 1180px) {
+
   .hero-text {
-    font-size: 80px; 
+    font-size: 80px;
     transform: translate(-50%, -50%);
     text-align: center;
     white-space: nowrap;
@@ -1281,146 +1386,316 @@ font-weight: 700;
     background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./Aufderwebseite/Collage_Tablet.png');
     margin-bottom: 40px;
   }
- 
+  .winebottles {
+    display: flex;
+    gap: 5em;
+    overflow: hidden; /* Versteckt Elemente, die über den Container hinausgehen */
+  }
+
+  .winebottles>div {
+    height: fit-content;
+    width: 50%; /* Passt die Breite an, sodass nur zwei "divs" nebeneinander passen */
+    margin: 0.5em;
+  }
+
+  .square {
+    position: relative;
+    width: 40vw;
+    height: 38vw;
+  }
+
+  .square img {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    transform: translateX(135%);
+    top: 27%;
+  }
+
+  .square p {
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0.4px;
+    width: 50%;
+    color: white;
+    padding: 0.5em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2px;
+  }
+
+  #carousel {
+    height: 70vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 0 1em;
+    margin-top: 10em;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .buttongroup {
+    flex-direction: row;
+    width: 80vw;
+    display: flex;
+    justify-content: center; /* Zentriert die Elemente horizontal */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    gap: 2em;
+    margin-top: -17em;
+    width: auto;
+  }
+
+  .carouselbtn {
+    position: relative;
+    opacity: 1;
+    width: 80px;
+    height: 12px;
+    background-color: #a8a8a8;
+  }
   .Produktvorstellung-container {
     flex-direction: column;
     align-items: center;
     padding-left: 0px;
     height: auto;
     background-image: linear-gradient(rgba(255, 255, 255, 0.516), rgba(255, 255, 255, 0.577)), url(./Aufderwebseite/Handy_Flaschen.png);
-    background-size: cover; /* Ändern Sie die Hintergrundgröße auf 'cover', um sicherzustellen, dass der Hintergrund vollständig sichtbar ist */
+    background-size: cover;
+    /* Ändern Sie die Hintergrundgröße auf 'cover', um sicherzustellen, dass der Hintergrund vollständig sichtbar ist */
     background-clip: padding-box;
   }
-  
+
   .Produktvorstellung-Text {
     flex: 1;
     text-align: left;
-    max-width: 85%; /* Begrenzt die Breite des Textes auf 85% des Containers */
- 
+    max-width: 85%;
+    /* Begrenzt die Breite des Textes auf 85% des Containers */
+
   }
+
   .Hintergrunddbild2 {
-    width: 100%; /* Behält die volle Breite bei */
-    height: 75vh; /* Reduziert die Höhe auf 75% des Viewports */
+    width: 100%;
+    /* Behält die volle Breite bei */
+    height: 75vh;
+    /* Reduziert die Höhe auf 75% des Viewports */
+  }
+
+  .productdetails-section {
+    max-height: 150vw;
+  }
+
+  .otherpicProduct {
+    display: block;
+    max-width: 70%; /* Reduziert die Breite des Bildes auf 80% */
+    height: 90%;
+    margin-left: auto; /* Zentriert das Bild horizontal */
+    margin-right: auto; /* Zentriert das Bild horizontal */
+  }
+
+  .productdetails-section h2 {
+    margin-left: 0px;
+    
+  }
+
+  .productdetails img,
+  .text,
+  .circle {
+    display: none;
+  }
+
+  .productdetails img {
+    display: none;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .circle {
+    display: none;
   }
 
   .weinvorstellungs-container {
-    padding-left: 50px;
+    min-height: 155vh;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
     margin-bottom: 100px;
-    align-items: center;
+    margin-top: -50px;
   }
 
+  .überschriften {
+    order: 1;
+    margin-top: -70px;
+    padding-left: 0px;
+    right: 170px;
+
+  }
+
+  .überschriften h2 {
+    margin-bottom: -1px;
+  }
+
+  #weinpreis {
+    margin-top: 15px;
+  }
+
+  #Literangabe {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+
+  .abstandrechts,
   .weinsquare {
-    align-items: center;
-    width: 80vw;
-    height: 78vw;
+    width: 70vw;
+    height: 60vw;
+    margin-top: 8px;
+    order: 2;
   }
 
-  .weinsquare img {
-    width: 40%;
-    top: 20%;
-  }
-
-  .weinsquare p {
-    font-size: 40px;
-  }
-
-  #vertikale-linie{
+  #vertikale-linie {
     display: none;
   }
 
   .wein-description {
-    padding-left: 50px;
+    max-width: 90vw;
+    margin-top: 160px;
+    margin-bottom: 50px;
+    left: 0;
+    order: 3;
   }
 
-  .überschriften {
-    margin-left: -505px;
+  .wein-text {
+    margin-left: -15px;
   }
-  
-  .weinpreis{
-    margin-left: 0px;
+
+  .wein-text p {
+    text-align: justify;
   }
-  
-  #Literangabe {
-    padding-top: 28px;
-    padding-right: 450px;
-    font-size: 14px;
-  }
- 
 
   .weinicons-bereich {
-    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    /* Positionieren Sie die Elemente weiter rechts */
+    margin-top: 40px;
+    margin-right: -50px;
+    /* Verschieben Sie den Icons-Bereich weiter nach rechts */
+  }
+  
+  .weinicons-bereich div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Zentrieren Sie die Elemente vertikal */
+    text-align: center;
+    /* Zentrieren Sie den Text horizontal */
+    margin-bottom: 25px;
   }
 
   .Location-icon img,
-  .Traube-icon img,
   .Weinkiste-icon img,
+  .Traube-icon img,
   .Temperatur-icon img {
-    width: 60px;
-    height: 80px;
+    display: block;
+    margin: 0 auto;
   }
 
-  .Weinkiste-icon p {
-    margin-top: 8px;
-    margin-left: 4px;
+  .Location-icon img {
+    width: 50px;
+    height: 68px;
   }
 
-  
-  .Herstellungsprozess-container {
-    padding: 0 50px;
-    margin-top: 70px;
+  .Weinkiste-icon img {
+    width: 80px;
+    height: 78px;
   }
 
- 
+  .Traube-icon img {
+    width: 65px;
+    height: 78px;
+  }
+
+  .Temperatur-icon img {
+    width: 55px;
+    height: 90px;
+  }
+
+  .Location-icon p,
+  .Weinkiste-icon p,
+  .Traube-icon p,
+  .Temperatur-icon p {
+    text-align: center;
+  }
+
   .mySlides {
-    width: 400px; /* Setzen Sie die Breite direkt */
+    width: 400px;
+    /* Setzen Sie die Breite direkt */
     margin-right: 20px
   }
 
   .mySlides img {
-    width: 100%; /* Bilder breiter machen */
-    height: auto; /* Höhe automatisch anpassen */
+    width: 100%;
+    /* Bilder breiter machen */
+    height: auto;
+    /* Höhe automatisch anpassen */
   }
 
   #bild9 {
-    height: 100%; /* Höhe des Bildes erhöhen */
+    height: 100%;
+    /* Höhe des Bildes erhöhen */
   }
 
   .prev,
   .next {
-  display: none;
+    display: none;
   }
-  .andereKlasse {
-    display: block;
+
+  .imageSlideButton button {
+    background-color: #808080; /* Graue Farbe für alle Buttons */
+    border: none; /* Entfernt den Standard-Button-Rahmen */
+    padding: 8px 35px; /* Größe des Buttons */
+    margin: 4px 2px;
+    margin-top: 30px;
+    cursor: pointer; /* Ändert den Mauszeiger beim Überfahren des Buttons */
+    transition-duration: 0.4s; /* Fügt eine Animation hinzu, wenn sich der Button-Stil ändert */
+    border-radius: 0px; /* Macht den Button rechteckig */
   }
-  .andereKlasse .buttongroup {
-    display: flex;
-    justify-content: center;
-    gap: 1em; /* Erhöhter Abstand */
-  }
-  
+
   .Bewertungs-container {
-    padding-left: 50px; /* Reduzieren Sie den linken Abstand */
-    margin-top: 40px; /* Reduzieren Sie den oberen Abstand */
-    margin-bottom: 100px; /* Reduzieren Sie den unteren Abstand */
+    padding-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 100px;
   }
- 
+
+  #imageButton1 {
+    background-color: #000000; /* Schwarze Farbe für den ersten Button */
+  }
+
 
   .Bewertung-drumherum img {
-    display: none; /* Bild nicht anzeigen */
+    display: none;
+    /* Bild nicht anzeigen */
   }
 
   .Bewertungs-text {
-    width: 100%; /* Erhöhen Sie die Breite des Textes */
-   
+    width: 100%;
+    /* Erhöhen Sie die Breite des Textes */
+
   }
 
   .Bewertungs-text>div {
-    margin-bottom: 8px; /* Reduzieren Sie den unteren Rand */
+    margin-bottom: 8px;
+    /* Reduzieren Sie den unteren Rand */
   }
 
   .Bewertungs-button {
-    font-size: 16px; /* Reduzieren Sie die Schriftgröße des Buttons */
-    padding: 12px 30px; /* Reduzieren Sie das Padding des Buttons */
+    font-size: 16px;
+    /* Reduzieren Sie die Schriftgröße des Buttons */
+    padding: 12px 30px;
+    /* Reduzieren Sie das Padding des Buttons */
   }
 
   .impressum-container {
@@ -1446,10 +1721,11 @@ font-weight: 700;
   .Letztes-bild {
     padding-left: 260px;
     margin-top: -300px;
+    position: relative;
   }
 
   .Letztes-bild img {
-    width: 110%;
+    width: 100%;
   }
 
   .footer-fa-icon {
@@ -1457,37 +1733,43 @@ font-weight: 700;
     margin-top: -40px;
   }
 
-  .fa.fa-youtube, .fa.fa-facebook , .fa.fa-pinterest {
-     margin-left: 5px;
-     font-size: 40px;
-    }
-
-  .fa.fa-instagram{
+  .fa.fa-youtube,
+  .fa.fa-facebook,
+  .fa.fa-pinterest {
+    margin-left: 5px;
     font-size: 40px;
   }
-    
+
+  .fa.fa-instagram {
+    font-size: 40px;
+  }
+
   .footer-bottom {
     height: 17vh;
-    }
-  
-  .footer-content {
-      padding-left: 15px; /* Reduziert den linken Padding */
-    }
-  
-  .footer-navigation {
-      padding-left: 15px; /* Reduziert den linken Padding */
-    }
+  }
 
-  #footer-ende{
+  .footer-content {
+    padding-left: 15px;
+    /* Reduziert den linken Padding */
+  }
+
+  .footer-navigation {
+    padding-left: 15px;
+    /* Reduziert den linken Padding */
+  }
+
+  #footer-ende {
     font-size: 15px;
     padding-right: 20px;
   }
-  
-  .letzter-Satz p,#disclaimer{
-    padding-left: 30px;
-      font-size: 13px; /* Verkleinert die Schriftgröße */
-    }  
 
-  
-  
+  .letzter-Satz p,
+  #disclaimer {
+    padding-left: 30px;
+    font-size: 13px;
+    /* Verkleinert die Schriftgröße */
+  }
+
+
+
 }

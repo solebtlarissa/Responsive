@@ -99,25 +99,29 @@
             <div class="Hintergrunddbild2"></div>
         </section>
 
-        <!-- 5. Produktmerkmale  -->
-        <section>
-            <div class="productdetails-section">
-                <div class="productdetails">
-                    <h2>Produktdetails</h2>
-
-                    <div id="product">
-                        <img src="Aufderwebseite\product_2.png" alt="" usemap="#bottlemap" />
-                        <div class="circle" id="cCircleOverlay"></div>
-                        <div class="circle" id="bCircleOverlay"></div>
-                        <div class="circle" id="lCircleOverlay"></div>
-                        <div class="circle" id="wCircleOverlay"></div>
-
-                        <!-- <map name="bottlemap">
+        <!-- <map name="bottlemap">
                                 <area id="cCircle" alt="cork" title="cork" href="#" coords="110,29,10" shape="circle" />
                                 <area id="bCircle" alt="bottle" title="bottle" href="#" coords="50,149,10" shape="circle" />
                                 <area id="lCircle" alt="label" title="label" href="#" coords="113,231,10" shape="circle" />
                                 <area id="wCircle" alt="wine" title="wine" href="#" coords="85,396,10" shape="circle" />
                             </map> -->
+        <!-- 5. Produktmerkmale  -->
+        <section>
+            <div class="productdetails-section">
+                <h2>Produktdetails</h2>
+
+                <img class="otherpicProduct" src="./Aufderwebseite/Weinflaschemitpunkten.png"
+                    alt="Eine Weinfasche mit Punkten">
+
+
+
+                <div class="productdetails">
+                    <div id="product">
+                        <img src="Aufderwebseite\product_2.png" alt="Eine Weinfasche " usemap="#bottlemap" />
+                        <div class="circle" id="cCircleOverlay"></div>
+                        <div class="circle" id="bCircleOverlay"></div>
+                        <div class="circle" id="lCircleOverlay"></div>
+                        <div class="circle" id="wCircleOverlay"></div>
                     </div>
 
                     <div class="text" id="cork">
@@ -162,6 +166,16 @@
         <!--6. Produkt im einzelnen  -->
         <section>
             <div class="weinvorstellungs-container">
+
+                <div class="überschriften">
+                    <h2>WEIN NO.834</h2>
+
+                    <div>
+                        <h3 id="weinpreis">89,99€</h3>
+                        <p id="Literangabe">Inhalt: 0.75 Liter (92,99€* / 1 Liter) </p>
+                    </div>
+                </div>
+
                 <div class="abstandrechts">
                     <div id="halfdry">
                         <div class="weinsquare">
@@ -175,61 +189,48 @@
 
                 <div class="wein-description">
 
-                    <div class="überschriften">
-                        <h2>WEIN NO.834</h2>
-
-                        <div class="weinpreis">
-                            <h3>89,99€</h3>
-                            <p id="Literangabe">Inhalt: 0.75 Liter (92,99€* / 1 Liter) </p>
-                        </div>
-                    </div>
-
                     <div class="wein-text">
                         <p>Wein No. 834, Jahrgang 2020, vereint Rebsorten aus Merlot und Pinot Noir.
                             Das Bouquet präsentiert florale Noten, aromatische Kräuter und reife Früchte.
-                            Kräftige Tannine verleihen dem Wein Lebendigkeit und Frische, begleitet vonGewürznuancen
-                            wie weißem
-                            Pfeffer imAbgang.
+                            Kräftige Tannine verleihen dem Wein Lebendigkeit und Frische, begleitet von Gewürznuancen
+                            wie weißem Pfeffer im Abgang.
                         </p>
 
 
                         <div class="weinicons-bereich">
 
-                            <div class="Location-icon">
-                                <img src="./Logo+Icon/Location.png" alt="Location">
-                                <p>Italien</p>
+                            <div class="icon-pair">
+                                <div class="Location-icon">
+                                    <img src="./Logo+Icon/Location.png" alt="Location">
+                                    <p>Italien</p>
+                                </div>
+                                <div class="Traube-icon">
+                                    <img src="./Logo+Icon/Traube_icon.png" alt="Traube">
+                                    <p>Merlot <br> und Pinot Noir</p>
+                                </div>
+
                             </div>
 
-                            <div class="Traube-icon">
-                                <img src="./Logo+Icon/Traube_icon.png" alt="Traube">
-                                <p>Merlot <br> und Pinot Noir</p>
-                            </div>
+                            <div class="icon-pair">
+                                <div class="Weinkiste-icon">
+                                    <img src="./Logo+Icon/Weinkiste.png" alt="Traube">
+                                    <p>8.0% vol.</p>
+                                </div>
 
-                            <div class="Weinkiste-icon">
-                                <img src="./Logo+Icon/Weinkiste.png" alt="Traube">
-                                <p>8.0% vol.</p>
-                            </div>
-
-                            <div class="Temperatur-icon">
-                                <img src="./Logo+Icon/Temperatur.png" alt="Traube">
-                                <p>Serviertemperatur <br>14 bis 16 °C</p>
+                                <div class="Temperatur-icon">
+                                    <img src="./Logo+Icon/Temperatur.png" alt="Traube">
+                                    <p>Serviertemperatur <br>14 bis 16 °C</p>
+                                </div>
                             </div>
 
                         </div>
 
-                        <div>
+                        <div class="button-wein-description">
                             <button id="CallToAction-Button" type="button">AB IN DIE KISTE</button>
                         </div>
 
                     </div>
 
-                </div>
-
-                <div class="andereKlasse2">
-                    <div class="buttongroup">
-                        <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
-                        <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
-                    </div>
                 </div>
 
             </div>
@@ -295,21 +296,29 @@
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-                <div class="andereKlasse">
-                    <div class="buttongroup">
-                        <span id="span1" class="carouselbtn"><button role="button" id="btn1"></button></span>
-                        <span id="span2" class="carouselbtn"><button role="button" id="btn2"></button></span>
-                        <span id="span3" class="carouselbtn"><button role="button" id="btn3"></button></span>
-                        <span id="span4" class="carouselbtn"><button role="button" id="btn4"></button></span>
-                        <span id="span5" class="carouselbtn"><button role="button" id="btn5"></button></span>
-                        <span id="span6" class="carouselbtn"><button role="button" id="btn6"></button></span>
-                        <span id="span7" class="carouselbtn"><button role="button" id="btn7"></button></span>
-                        <span id="span8" class="carouselbtn"><button role="button" id="btn8"></button></span>
-                        <span id="span9" class="carouselbtn"><button role="button" id="btn9"></button></span>
-                    </div>
+
+                <div class="imageSliderGroup">
+                    <span id="imageSlide1" class="imageSlideButton"><button role="button" id="imageButton1">
+                        </button></span>
+                    <span id="imageSlide2" class="imageSlideButton"><button role="button" id="imageButton2">
+                        </button></span>
+                    <span id="imageSlide3" class="imageSlideButton"><button role="button" id="imageButton3">
+                        </button></span>
+                    <span id="imageSlide4" class="imageSlideButton"><button role="button" id="imageButton4">
+                        </button></span>
+                    <span id="imageSlide5" class="imageSlideButton"><button role="button" id="imageButton5">
+                        </button></span>
+                    <span id="imageSlide6" class="imageSlideButton"><button role="button" id="imageButton6">
+                        </button></span>
+                    <span id="imageSlide7" class="imageSlideButton"><button role="button" id="imageButton7">
+                        </button></span>
+                    <span id="imageSlide8" class="imageSlideButton"><button role="button" id="imageButton8">
+                        </button></span>
+                    <span id="imageSlide9" class="imageSlideButton"><button role="button" id="imageButton9">
+                        </button></span>
                 </div>
             </div>
-            <div class="abstand"></div>
+            <div class="abstandzwei"></div>
         </section>
 
         <!-- 8. Bewertungen -->
@@ -467,7 +476,7 @@
             </div>
             <div class="letzter-Satz">
                 <p>Bilder aus Canva, eigener Bibliothek oder AI generiert</p>
-                <p id="disclaimer">Genießt den Wein und säuft ihn euch nicht rein</p>
+                <p id="disclaimer">Genießt den Wein und sauft ihn euch nicht rein</p>
             </div>
         </div>
 
