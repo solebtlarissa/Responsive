@@ -944,6 +944,12 @@ area {
 
 /* Responsive-Styles für kleine Bildschirme */
 @media screen and (max-width: 650px) {
+  h2{
+    font-size: 32px;
+  }
+  h3{
+    font-size: 28px;
+  }
   header {
     width: 25%;
     /* Der Header erstreckt sich über die volle Breite des Bildschirms */
@@ -989,7 +995,7 @@ area {
   }
 
   .square p {
-    font-size: 35px;
+    font-size: 30px;
     width: 70%;
   }
 
@@ -1076,7 +1082,7 @@ area {
  
   .productdetails-section h2 {
     margin-left: -40px; /* Verschiebt die Überschrift weiter nach links */
-    font-size: 35px;
+    font-size: 30px;
 
   }
  
@@ -1093,7 +1099,7 @@ area {
   }
   .weinvorstellungs-container {
     min-height: 200vh;
-    overflow: auto; /* Fügt Scrollbars hinzu, wenn der Inhalt die max-height überschreitet */
+   
     flex-direction: column;
     align-items: center;
     margin-left: 0;
@@ -1112,7 +1118,8 @@ area {
   }
 
   #weinpreis {
-    margin-top: 15px; /* Reduziert den oberen Rand auf 5px */
+    margin-top: 20px; /* Reduziert den oberen Rand auf 5px */
+    font-size: 25px;
   }
 
   #Literangabe {
@@ -1218,8 +1225,7 @@ area {
 
   .slideshow-container {
     flex-direction: row;
-    overflow: hidden;
-    /* Versteckt das angeschnittene Bild */
+    overflow: hidden; /* Versteckt das angeschnittene Bild */
   }
 
   .mySlides {
@@ -1239,7 +1245,9 @@ area {
     display: none;
   }
 
+
   .imageSlideButton button {
+ 
     background-color: #808080; /* Graue Farbe für alle Buttons */
     border: none; /* Entfernt den Standard-Button-Rahmen */
     padding: 4px 24px; /* Verkleinert die Größe des Buttons */
@@ -1251,9 +1259,8 @@ area {
   }
 
   .imageSliderGroup {
-    overflow: auto; /* Fügt einen horizontalen Scrollbalken hinzu, wenn der Inhalt überläuft */
+    display: block !important;
     white-space: nowrap; /* Verhindert, dass die Elemente in eine neue Zeile umgebrochen werden */
-    scrollbar-width: none; /* Für Firefox */
   }
 
   .imageSliderGroup::-webkit-scrollbar {
