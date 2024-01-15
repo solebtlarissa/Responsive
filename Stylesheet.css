@@ -1078,6 +1078,7 @@ area {
     height: auto;
     margin-left: auto; /* Zentriert das Bild horizontal */
     margin-right: auto; /* Zentriert das Bild horizontal */
+    margin-bottom: 0px
   }
  
   .productdetails-section h2 {
@@ -1098,7 +1099,7 @@ area {
   }
 
   .weinvorstellungs-container {
-    min-height: 200vh;
+    min-height: 145vh;
     flex-direction: column;
     align-items: center;
     margin-left: 0;
@@ -1381,7 +1382,7 @@ area {
 
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1180px) {
+@media only screen and (min-width: 650px) and (max-width: 1080px) {
 
   .hero-text {
     font-size: 80px;
@@ -1453,7 +1454,7 @@ area {
     justify-content: center; /* Zentriert die Elemente horizontal */
     align-items: center; /* Zentriert die Elemente vertikal */
     gap: 2em;
-    margin-top: -17em;
+    margin-top: 0em;
     width: auto;
   }
 
@@ -1500,6 +1501,7 @@ area {
     height: 90%;
     margin-left: auto; /* Zentriert das Bild horizontal */
     margin-right: auto; /* Zentriert das Bild horizontal */
+    margin-bottom: 100px
   }
 
   .productdetails-section h2 {
@@ -1526,7 +1528,7 @@ area {
   }
 
   .weinvorstellungs-container {
-    min-height: 135vh;
+    min-height: 155vh;
     overflow: auto;
     flex-direction: column;
     align-items: center;
