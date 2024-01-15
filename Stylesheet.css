@@ -574,7 +574,7 @@ aside {
   text-align: left;
   font-size: 20px;
   background-color: unset !important;
-  color: #707070;
+  color: #3e3c3c;
   font-size: 1em;
   position: relative;
   visibility: hidden;
@@ -1048,6 +1048,7 @@ area {
     background-image: linear-gradient(rgba(255, 255, 255, 0.516), rgba(255, 255, 255, 0.577)), url(./Aufderwebseite/Handy_Flaschen.png);
     background-size: 130%;
     background-clip: padding-box;
+
   }
 
   .Produktvorstellung-Text {
@@ -1065,7 +1066,6 @@ area {
     width: 100%;
     /* Anpassen der Breite für kleinere Bildschirme */
     height: 100vh;
-    /* Anpassen der Höhe für kleinere Bildschirme */
   }
  
   .productdetails-section {
@@ -1083,7 +1083,6 @@ area {
   .productdetails-section h2 {
     margin-left: -40px; /* Verschiebt die Überschrift weiter nach links */
     font-size: 30px;
-
   }
  
   .productdetails img {
@@ -1097,9 +1096,9 @@ area {
   .circle {
     display: none;
   }
+
   .weinvorstellungs-container {
     min-height: 200vh;
-   
     flex-direction: column;
     align-items: center;
     margin-left: 0;
@@ -1110,7 +1109,7 @@ area {
   .überschriften {
     order: 1;
     margin-top: -70px; 
-    padding-left: 20px; 
+    padding-left: 0px; 
   }
 
   .überschriften h2{
@@ -1133,6 +1132,7 @@ area {
     margin-top: 8px;
     order: 2;
   }
+
   #vertikale-linie {
     display: none;
   }
@@ -1166,6 +1166,14 @@ area {
   justify-content: space-between;
 }
 
+.Traube-icon {
+  margin-left: 20px; /* Passen Sie den Wert nach Bedarf an */
+}
+
+.Location-icon {
+  margin-left: 25px; /* Passen Sie den Wert nach Bedarf an */
+}
+
 .Location-icon,
 .Weinkiste-icon,
 .Traube-icon,
@@ -1175,8 +1183,6 @@ area {
   justify-content: center;
   align-items: center;
 }
-
-
 
   .Location-icon img {
     width: 50px;
@@ -1192,6 +1198,7 @@ area {
     width: 65px;
     height: 78px;
     align-items: center;
+    margin-left: 10px;
   }
   
   .Temperatur-icon img {
@@ -1247,7 +1254,6 @@ area {
 
 
   .imageSlideButton button {
- 
     background-color: #808080; /* Graue Farbe für alle Buttons */
     border: none; /* Entfernt den Standard-Button-Rahmen */
     padding: 4px 24px; /* Verkleinert die Größe des Buttons */
@@ -1289,6 +1295,7 @@ area {
   .Bewertungs-text {
     width: 100%;
     margin-right: 0;
+    line-height: 1.5;
   }
 
   .Bewertungs-text hr {
@@ -1306,9 +1313,7 @@ area {
   }
 
   .bewertungsicon-container img {
-    width: 6vh;
-    height: 11vh;
-    margin-right: 12px;
+   display: none;
   }
 
   .Bewertungs-button {
@@ -1482,7 +1487,7 @@ area {
     width: 100%;
     /* Behält die volle Breite bei */
     height: 75vh;
-    /* Reduziert die Höhe auf 75% des Viewports */
+    margin-bottom: 80px;
   }
 
   .productdetails-section {
@@ -1588,48 +1593,58 @@ area {
     /* Verschieben Sie den Icons-Bereich weiter nach rechts */
   }
   
+  .weinicons-bereich {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Ändern Sie dies von column zu row */
+    flex-wrap: wrap;
+  }
+  
   .weinicons-bereich div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .Location-icon,
+  .Weinkiste-icon,
+  .Traube-icon,
+  .Temperatur-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-bottom: 25px;
   }
-
-  .Location-icon img,
-  .Weinkiste-icon img,
-  .Traube-icon img,
-  .Temperatur-icon img {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .Location-icon img {
-    width: 50px;
-    height: 68px;
-  }
-
-  .Weinkiste-icon img {
-    width: 80px;
-    height: 78px;
-  }
-
-  .Traube-icon img {
-    width: 65px;
-    height: 78px;
-  }
-
-  .Temperatur-icon img {
-    width: 55px;
-    height: 90px;
-  }
-
-  .Location-icon p,
-  .Weinkiste-icon p,
-  .Traube-icon p,
-  .Temperatur-icon p {
-    text-align: center;
-  }
+  
+    .Location-icon img {
+      width: 50px;
+      height: 68px;
+    }
+   
+    .Weinkiste-icon img {
+      width: 80px;
+      height: 78px;
+    }
+    
+    .Traube-icon img {
+      width: 65px;
+      height: 78px;
+      align-items: center;
+    }
+    
+    .Temperatur-icon img {
+      width: 55px;
+      height: 90px;
+    }
+  
+    .Location-icon p,
+    .Weinkiste-icon p,
+    .Traube-icon p,
+    .Temperatur-icon p {
+      text-align: center; /* Zentriert den Text */
+    }
 
   .mySlides {
     width: 400px;
@@ -1715,7 +1730,7 @@ area {
 
   .footer-fa-icon {
     margin-left: 0px;
-    margin-top: -40px;
+    margin-top: 40px;
   }
 
   .fa.fa-youtube,
