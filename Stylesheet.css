@@ -1099,7 +1099,7 @@ area {
   }
 
   .weinvorstellungs-container {
-    min-height: 145vh;
+    min-height: 195vh;
     flex-direction: column;
     align-items: center;
     margin-left: 0;
@@ -1382,7 +1382,7 @@ area {
 
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1080px) {
+@media only screen and (min-width: 650px) and (max-width: 1180px) {
 
   .hero-text {
     font-size: 80px;
